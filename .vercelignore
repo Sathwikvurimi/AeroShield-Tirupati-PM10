@@ -1,0 +1,16 @@
+# Ignore local virtual environments & dependencies
+venv/
+.venv/
+node_modules/
+frontend/node_modules/
+.git/
+.vscode/
+.idea/
+
+# Ignore scratch & test files
+scratch/
+tests/
+*.log
+*.pyc
+__pycache__/
+frontend/src/
