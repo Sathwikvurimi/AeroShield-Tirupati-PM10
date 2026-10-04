@@ -4,8 +4,8 @@
 <div class="anomalies-page">
     <div class="page-title-bar glass-card">
         <div>
-            <h2><i class="fa-solid fa-triangle-exclamation"></i> PM10 Anomaly Detection & Outlier Analysis</h2>
-            <p>Isolation Forest & Statistical Outlier Identification Framework</p>
+            <h2><i class="fa-solid fa-triangle-exclamation"></i> PM10 Anomaly Detection &amp; Outlier Analysis</h2>
+            <p>Isolation Forest &amp; Statistical Outlier Identification Framework</p>
         </div>
         <div class="header-export-actions">
             <a href="/api/export/anomalies" class="btn btn-outline">
@@ -72,7 +72,7 @@
             <h3><i class="fa-solid fa-chart-line"></i> PM10 Time-Series with Highlighted Anomaly Scatter Points</h3>
             <span class="text-muted">Red points indicate anomalous observations</span>
         </div>
-        <div class="chart-wrapper" style="height: 380px;">
+        <div class="chart-wrapper chart-wrapper-lg">
             <canvas id="anomalyChart"></canvas>
         </div>
     </div>
@@ -109,7 +109,7 @@
     <div class="modal-content glass-card" onclick="event.stopPropagation()">
         <div class="modal-header">
             <h3><i class="fa-solid fa-microscope"></i> Anomaly Inspector Detail</h3>
-            <button class="modal-close" onclick="closeAnomalyModal()">&times;</button>
+            <button type="button" class="modal-close" onclick="closeAnomalyModal()">&times;</button>
         </div>
         <div class="modal-body" id="modal-anomaly-body">
             <!-- Modal detail content -->

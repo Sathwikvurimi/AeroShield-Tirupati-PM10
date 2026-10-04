@@ -683,6 +683,15 @@ body {
 .mt-3 { margin-top: 0.75rem; }
 .mt-4 { margin-top: 1.5rem; }
 
+.chart-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.chart-wrapper-lg {
+    height: 380px;
+}
+
 @media (max-width: 900px) {
     .grid-2-col { grid-template-columns: 1fr; }
     .header-container { flex-direction: column; }
