@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="models-page">
+    <div class="page-title-bar glass-card">
+        <div>
+            <h2><i class="fa-solid fa-brain"></i> Machine Learning Model Comparison & Evaluation</h2>
+            <p>Empirical Comparison of Regression, Classification & Backtest Performance</p>
+        </div>
+        <div class="badge-group">
+            <span class="badge green"><i class="fa-solid fa-trophy"></i> Best Regression: XGBoost</span>
+            <span class="badge purple"><i class="fa-solid fa-award"></i> Best Classifier: XGBoost</span>
+        </div>
+    </div>
+
+    <!-- Regression Comparison Section -->
+    <div class="glass-card mt-4">
+        <div class="card-header">
+            <h3><i class="fa-solid fa-chart-line"></i> 1. PM10 Regression Model Leaderboard</h3>
+            <span class="text-muted">Target: Next-Hour PM10 Concentration (µg/m³) | Chronological Split</span>
+        </div>
+        <div class="table-responsive">
+            <table class="custom-table" id="table-regression-models">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Model Name</th>
+                        <th>MAE (µg/m³)</th>
+                        <th>RMSE (µg/m³)</th>
+                        <th>R² Score</th>
+                        <th>MAPE (%)</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody-regression">
+                    <!-- Injected via JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Classification Comparison Section -->
+    <div class="glass-card mt-4">
+        <div class="card-header">
+            <h3><i class="fa-solid fa-tags"></i> 2. PM10 Pollution Category Classification Leaderboard</h3>
+            <span class="text-muted">Standard CPCB Categories: Good, Satisfactory, Moderate, Poor, Very Poor, Severe</span>
+        </div>
+        <div class="table-responsive">
+            <table class="custom-table" id="table-classification-models">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Model Name</th>
+                        <th>Accuracy (%)</th>
+                        <th>Precision (%)</th>
+                        <th>Recall (%)</th>
+                        <th>Macro F1 (%)</th>
+                        <th>Balanced Acc (%)</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody-classification">
+                    <!-- Injected via JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Interactive Confusion Matrix & Interpretation Grid -->
+    <div class="grid-2-col mt-4">
+        <div class="glass-card">
+            <div class="card-header">
+                <h3><i class="fa-solid fa-table-cells"></i> Interactive Confusion Matrix</h3>
+                <span class="text-muted">Best Classifier Output</span>
+            </div>
+            <div class="confusion-matrix-wrapper">
+                <div id="confusion-matrix-grid" class="cm-grid">
+                    <!-- Injected CM cells -->
+                </div>
+            </div>
+        </div>
+
+        <div class="glass-card info-box-glow">
+            <h3><i class="fa-solid fa-circle-question"></i> Confusion Matrix Interpretation</h3>
+            
+            <div class="cm-explanation-block mt-3">
+                <h4><i class="fa-solid fa-triangle-exclamation text-warning"></i> False Positives (Type I Error):</h4>
+                <p>
+                    The model predicts a severe pollution category when actual air quality is moderate. 
+                    <strong>Impact:</strong> Triggers unnecessary public warnings or advisory alerts, causing temporary public panic or unneeded industrial restriction.
+                </p>
+            </div>
+
+            <div class="cm-explanation-block mt-3">
+                <h4><i class="fa-solid fa-shield-cat text-danger"></i> False Negatives (Type II Error):</h4>
+                <p>
+                    The model predicts moderate air quality when actual PM10 is severe. 
+                    <strong>Impact:</strong> Critical health hazard. Vulnerable populations (asthma, elderly) are left unprotected without advance warning during hazardous smog events.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/models.js') }}"></script>
+{% endblock %}

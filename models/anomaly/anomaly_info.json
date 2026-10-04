@@ -1,0 +1,9 @@
+{
+    "primary_model": "Isolation Forest (Multi-variate)",
+    "secondary_model": "Local Outlier Factor",
+    "total_observations": 54437,
+    "isolation_forest_anomalies": 1634,
+    "isolation_forest_percentage": 3.0,
+    "contamination": 0.03,
+    "trained_date": "2026-10-04 03:41:59"
+}

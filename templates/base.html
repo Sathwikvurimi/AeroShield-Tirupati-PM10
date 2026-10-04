@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroShield – PM10 Air Analysis & ML Forecasting</title>
+    <meta name="description" content="AeroShield is an advanced college-level ML + Web platform dedicated exclusively to PM10 particulate matter monitoring, forecasting, pollution classification, and anomaly detection.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Chart.js & Leaflet CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Main Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Top Navigation Header -->
+    <header class="app-header">
+        <div class="header-container">
+            <a href="/" class="brand-logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-title">AEROSHIELD</span>
+                    <span class="brand-subtitle">TIRUPATI PM10 ANALYSIS</span>
+                </div>
+            </a>
+
+            <nav class="main-nav">
+                <a href="/" class="nav-link {% if page == 'dashboard' %}active{% endif %}" id="nav-dashboard">
+                    <i class="fa-solid fa-gauge-high"></i> Dashboard
+                </a>
+                <a href="/live" class="nav-link {% if page == 'live' %}active{% endif %}" id="nav-live">
+                    <i class="fa-solid fa-tower-broadcast"></i> Live Monitoring
+                </a>
+                <a href="/prediction" class="nav-link {% if page == 'prediction' %}active{% endif %}" id="nav-prediction">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Prediction
+                </a>
+                <a href="/historical" class="nav-link {% if page == 'historical' %}active{% endif %}" id="nav-historical">
+                    <i class="fa-solid fa-chart-line"></i> Historical
+                </a>
+                <a href="/data-quality" class="nav-link {% if page == 'data_quality' %}active{% endif %}" id="nav-data-quality">
+                    <i class="fa-solid fa-database"></i> Data Quality
+                </a>
+                <a href="/models" class="nav-link {% if page == 'models' %}active{% endif %}" id="nav-models">
+                    <i class="fa-solid fa-brain"></i> ML Models
+                </a>
+                <a href="/anomalies" class="nav-link {% if page == 'anomalies' %}active{% endif %}" id="nav-anomalies">
+                    <i class="fa-solid fa-triangle-exclamation"></i> Anomalies
+                </a>
+                <a href="/history" class="nav-link {% if page == 'history' %}active{% endif %}" id="nav-history">
+                    <i class="fa-solid fa-clock-rotate-left"></i> History
+                </a>
+                <a href="/about" class="nav-link {% if page == 'about' %}active{% endif %}" id="nav-about">
+                    <i class="fa-solid fa-circle-info"></i> About
+                </a>
+            </nav>
+
+            <div class="header-actions">
+                <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <div class="live-indicator-badge">
+                    <span class="pulse-dot"></span> LIVE PM10
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Main Content Area -->
+    <main class="main-wrapper">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <i class="fa-solid fa-shield-halved"></i> AeroShield PM10 Analysis System &copy; 2026
+            </div>
+            <div class="footer-disclaimer">
+                <i class="fa-solid fa-circle-check"></i> PM10-Focused ML Framework | Academic Research & Environmental Data Intelligence
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main Global JavaScript -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

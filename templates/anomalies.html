@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="anomalies-page">
+    <div class="page-title-bar glass-card">
+        <div>
+            <h2><i class="fa-solid fa-triangle-exclamation"></i> PM10 Anomaly Detection & Outlier Analysis</h2>
+            <p>Isolation Forest & Statistical Outlier Identification Framework</p>
+        </div>
+        <div class="header-export-actions">
+            <a href="/api/export/anomalies" class="btn btn-outline">
+                <i class="fa-solid fa-download"></i> Export Anomalies CSV
+            </a>
+        </div>
+    </div>
+
+    <!-- Warning Disclaimer Banner -->
+    <div class="warning-banner glass-card">
+        <i class="fa-solid fa-circle-exclamation warning-icon"></i>
+        <div>
+            <strong>ACADEMIC DISCLAIMER:</strong>
+            An anomaly detection algorithm identifies unusual observations relative to historical PM10 behavior. It does <em>NOT</em> automatically determine whether a physical sensor measurement is corrupted or wrong. An anomaly may represent extreme weather events, local dust spikes, industrial emissions, or maintenance activity.
+        </div>
+    </div>
+
+    <!-- Anomaly Summary Cards -->
+    <div class="metrics-grid mt-4">
+        <div class="metric-card glass-card">
+            <div class="card-header-sm">
+                <span class="card-title">TOTAL OBSERVATIONS</span>
+                <i class="fa-solid fa-database icon-subtle"></i>
+            </div>
+            <div class="metric-body">
+                <span id="ano-total-obs" class="metric-number">--</span>
+            </div>
+        </div>
+
+        <div class="metric-card glass-card">
+            <div class="card-header-sm">
+                <span class="card-title">ANOMALIES DETECTED</span>
+                <i class="fa-solid fa-bolt icon-subtle text-danger"></i>
+            </div>
+            <div class="metric-body">
+                <span id="ano-count" class="metric-number text-danger">--</span>
+            </div>
+        </div>
+
+        <div class="metric-card glass-card">
+            <div class="card-header-sm">
+                <span class="card-title">ANOMALY PERCENTAGE</span>
+                <i class="fa-solid fa-percent icon-subtle"></i>
+            </div>
+            <div class="metric-body">
+                <span id="ano-pct" class="metric-number text-accent">--%</span>
+            </div>
+        </div>
+
+        <div class="metric-card glass-card">
+            <div class="card-header-sm">
+                <span class="card-title">PRIMARY ALGORITHM</span>
+                <i class="fa-solid fa-tree icon-subtle"></i>
+            </div>
+            <div class="metric-body">
+                <span class="metric-number fs-18">Isolation Forest</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive Scatter Plot with Highlighted Outliers -->
+    <div class="glass-card mt-4">
+        <div class="card-header">
+            <h3><i class="fa-solid fa-chart-line"></i> PM10 Time-Series with Highlighted Anomaly Scatter Points</h3>
+            <span class="text-muted">Red points indicate anomalous observations</span>
+        </div>
+        <div class="chart-wrapper" style="height: 380px;">
+            <canvas id="anomalyChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Detected Anomalies Table -->
+    <div class="glass-card mt-4">
+        <div class="card-header">
+            <h3><i class="fa-solid fa-list"></i> Detected Anomalous PM10 Events Log</h3>
+            <span class="text-muted">Click any row to inspect context details</span>
+        </div>
+        <div class="table-responsive">
+            <table class="custom-table" id="table-anomalies">
+                <thead>
+                    <tr>
+                        <th>Timestamp</th>
+                        <th>PM10 Value (µg/m³)</th>
+                        <th>Isolation Score</th>
+                        <th>Lag 1h</th>
+                        <th>24h Rolling Mean</th>
+                        <th>Hour of Day</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody-anomalies">
+                    <!-- Injected via JS -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Anomaly Inspection -->
+<div id="anomaly-modal" class="modal-overlay" onclick="closeAnomalyModal(event)">
+    <div class="modal-content glass-card" onclick="event.stopPropagation()">
+        <div class="modal-header">
+            <h3><i class="fa-solid fa-microscope"></i> Anomaly Inspector Detail</h3>
+            <button class="modal-close" onclick="closeAnomalyModal()">&times;</button>
+        </div>
+        <div class="modal-body" id="modal-anomaly-body">
+            <!-- Modal detail content -->
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/anomalies.js') }}"></script>
+{% endblock %}

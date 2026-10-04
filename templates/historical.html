@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="historical-page">
+    <div class="page-title-bar glass-card">
+        <div>
+            <h2><i class="fa-solid fa-chart-line"></i> Historical PM10 Time-Series Analysis (Tirupati)</h2>
+            <p>Empirical Study of Historical PM10 Concentration Patterns in Tirupati, Andhra Pradesh</p>
+        </div>
+        <div class="header-export-actions">
+            <a href="/api/export/historical" class="btn btn-outline">
+                <i class="fa-solid fa-download"></i> Export Historical CSV
+            </a>
+        </div>
+    </div>
+
+    <!-- Date Filter Bar -->
+    <div class="filter-bar glass-card">
+        <div class="filter-group">
+            <label><i class="fa-regular fa-calendar"></i> Start Date:</label>
+            <input type="date" id="filter-start-date" class="form-input-sm">
+        </div>
+        <div class="filter-group">
+            <label><i class="fa-regular fa-calendar"></i> End Date:</label>
+            <input type="date" id="filter-end-date" class="form-input-sm">
+        </div>
+        <button class="btn btn-primary btn-sm" onclick="applyHistoricalFilter()">
+            <i class="fa-solid fa-filter"></i> Apply Filter
+        </button>
+        <button class="btn btn-secondary btn-sm" onclick="resetHistoricalFilter()">
+            Reset
+        </button>
+    </div>
+
+    <!-- Summary Statistics Cards Row -->
+    <div class="stats-summary-grid">
+        <div class="stat-card glass-card">
+            <span class="stat-label">Total Observations</span>
+            <span id="stat-count" class="stat-value">--</span>
+        </div>
+        <div class="stat-card glass-card">
+            <span class="stat-label">Mean PM10</span>
+            <span id="stat-mean" class="stat-value text-accent">-- µg/m³</span>
+        </div>
+        <div class="stat-card glass-card">
+            <span class="stat-label">Median PM10</span>
+            <span id="stat-median" class="stat-value">-- µg/m³</span>
+        </div>
+        <div class="stat-card glass-card">
+            <span class="stat-label">Std Deviation</span>
+            <span id="stat-std" class="stat-value">--</span>
+        </div>
+        <div class="stat-card glass-card">
+            <span class="stat-label">Min PM10</span>
+            <span id="stat-min" class="stat-value text-success">-- µg/m³</span>
+        </div>
+        <div class="stat-card glass-card">
+            <span class="stat-label">Max PM10</span>
+            <span id="stat-max" class="stat-value text-danger">-- µg/m³</span>
+        </div>
+        <div class="stat-card glass-card">
+            <span class="stat-label">IQR (Q25 - Q75)</span>
+            <span id="stat-iqr" class="stat-value">--</span>
+        </div>
+    </div>
+
+    <!-- Time Series Main Chart -->
+    <div class="glass-card mt-4">
+        <div class="card-header">
+            <h3><i class="fa-solid fa-chart-area"></i> Chronological PM10 Time-Series Concentration</h3>
+            <span class="text-muted">Tirupati AP001 Station Dataset</span>
+        </div>
+        <div class="chart-wrapper" style="height: 360px;">
+            <canvas id="historicalTimeSeriesChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Diurnal & Day-of-Week Patterns Grid -->
+    <div class="grid-2-col mt-4">
+        <!-- Hourly Diurnal Pattern -->
+        <div class="glass-card">
+            <div class="card-header">
+                <h3><i class="fa-solid fa-clock"></i> Diurnal PM10 Pattern (Hourly Average)</h3>
+            </div>
+            <div class="chart-wrapper" style="height: 280px;">
+                <canvas id="hourlyPatternChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Day of Week Pattern -->
+        <div class="glass-card">
+            <div class="card-header">
+                <h3><i class="fa-solid fa-calendar-days"></i> Day of Week PM10 Concentration</h3>
+            </div>
+            <div class="chart-wrapper" style="height: 280px;">
+                <canvas id="dayOfWeekChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Distribution Histogram & Category Breakdown -->
+    <div class="grid-2-col mt-4">
+        <div class="glass-card">
+            <div class="card-header">
+                <h3><i class="fa-solid fa-chart-simple"></i> PM10 Concentration Histogram</h3>
+            </div>
+            <div class="chart-wrapper" style="height: 280px;">
+                <canvas id="histogramChart"></canvas>
+            </div>
+        </div>
+
+        <div class="glass-card">
+            <div class="card-header">
+                <h3><i class="fa-solid fa-pie-chart"></i> Pollution Category Breakdown</h3>
+            </div>
+            <div class="chart-wrapper" style="height: 280px;">
+                <canvas id="categoryPieChart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/historical.js') }}"></script>
+{% endblock %}

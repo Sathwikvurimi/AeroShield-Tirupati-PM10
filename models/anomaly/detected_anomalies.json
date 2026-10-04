@@ -1,0 +1,1802 @@
+[
+    {
+        "timestamp": "2016-10-28 09:00:00",
+        "pm10": 65.0,
+        "iso_score": -0.0514,
+        "hour": 9,
+        "month": 10,
+        "lag_1h": 57.0,
+        "rolling_mean_24h": 106.93
+    },
+    {
+        "timestamp": "2016-11-02 20:00:00",
+        "pm10": 110.0,
+        "iso_score": -0.0738,
+        "hour": 20,
+        "month": 11,
+        "lag_1h": 118.0,
+        "rolling_mean_24h": 77.01
+    },
+    {
+        "timestamp": "2016-12-02 01:00:00",
+        "pm10": 18.5,
+        "iso_score": -0.0918,
+        "hour": 1,
+        "month": 12,
+        "lag_1h": 11.25,
+        "rolling_mean_24h": 89.18
+    },
+    {
+        "timestamp": "2016-12-02 02:00:00",
+        "pm10": 19.5,
+        "iso_score": -0.1653,
+        "hour": 2,
+        "month": 12,
+        "lag_1h": 18.5,
+        "rolling_mean_24h": 85.05
+    },
+    {
+        "timestamp": "2016-12-02 03:00:00",
+        "pm10": 16.25,
+        "iso_score": -0.2236,
+        "hour": 3,
+        "month": 12,
+        "lag_1h": 19.5,
+        "rolling_mean_24h": 80.97
+    },
+    {
+        "timestamp": "2016-12-02 04:00:00",
+        "pm10": 12.75,
+        "iso_score": -0.2607,
+        "hour": 4,
+        "month": 12,
+        "lag_1h": 16.25,
+        "rolling_mean_24h": 76.71
+    },
+    {
+        "timestamp": "2016-12-02 05:00:00",
+        "pm10": 21.67,
+        "iso_score": -0.2548,
+        "hour": 5,
+        "month": 12,
+        "lag_1h": 12.75,
+        "rolling_mean_24h": 72.28
+    },
+    {
+        "timestamp": "2016-12-02 06:00:00",
+        "pm10": 28.67,
+        "iso_score": -0.2306,
+        "hour": 6,
+        "month": 12,
+        "lag_1h": 21.67,
+        "rolling_mean_24h": 67.9
+    },
+    {
+        "timestamp": "2016-12-02 07:00:00",
+        "pm10": 27.0,
+        "iso_score": -0.1236,
+        "hour": 7,
+        "month": 12,
+        "lag_1h": 28.67,
+        "rolling_mean_24h": 63.58
+    },
+    {
+        "timestamp": "2016-12-17 10:00:00",
+        "pm10": 134.0,
+        "iso_score": -0.0108,
+        "hour": 10,
+        "month": 12,
+        "lag_1h": 136.25,
+        "rolling_mean_24h": 97.86
+    },
+    {
+        "timestamp": "2016-12-20 23:00:00",
+        "pm10": 143.0,
+        "iso_score": -0.2743,
+        "hour": 23,
+        "month": 12,
+        "lag_1h": 145.67,
+        "rolling_mean_24h": 111.39
+    },
+    {
+        "timestamp": "2016-12-21 00:00:00",
+        "pm10": 113.75,
+        "iso_score": -0.2294,
+        "hour": 0,
+        "month": 12,
+        "lag_1h": 143.0,
+        "rolling_mean_24h": 111.55
+    },
+    {
+        "timestamp": "2016-12-21 02:00:00",
+        "pm10": 54.0,
+        "iso_score": -0.9253,
+        "hour": 2,
+        "month": 12,
+        "lag_1h": 55.75,
+        "rolling_mean_24h": 108.44
+    },
+    {
+        "timestamp": "2016-12-21 03:00:00",
+        "pm10": 55.33,
+        "iso_score": -0.0395,
+        "hour": 3,
+        "month": 12,
+        "lag_1h": 54.0,
+        "rolling_mean_24h": 106.09
+    },
+    {
+        "timestamp": "2016-12-30 00:00:00",
+        "pm10": 130.75,
+        "iso_score": -0.0089,
+        "hour": 0,
+        "month": 12,
+        "lag_1h": 136.0,
+        "rolling_mean_24h": 111.45
+    },
+    {
+        "timestamp": "2016-12-31 02:00:00",
+        "pm10": 114.25,
+        "iso_score": -0.0188,
+        "hour": 2,
+        "month": 12,
+        "lag_1h": 122.75,
+        "rolling_mean_24h": 120.01
+    },
+    {
+        "timestamp": "2017-01-06 18:00:00",
+        "pm10": 105.5,
+        "iso_score": -0.5216,
+        "hour": 18,
+        "month": 1,
+        "lag_1h": 106.0,
+        "rolling_mean_24h": 96.02
+    },
+    {
+        "timestamp": "2017-01-06 23:00:00",
+        "pm10": 132.0,
+        "iso_score": -0.0436,
+        "hour": 23,
+        "month": 1,
+        "lag_1h": 136.5,
+        "rolling_mean_24h": 95.81
+    },
+    {
+        "timestamp": "2017-01-07 00:00:00",
+        "pm10": 117.75,
+        "iso_score": -0.0248,
+        "hour": 0,
+        "month": 1,
+        "lag_1h": 132.0,
+        "rolling_mean_24h": 96.39
+    },
+    {
+        "timestamp": "2017-02-10 11:00:00",
+        "pm10": 60.5,
+        "iso_score": -0.262,
+        "hour": 11,
+        "month": 2,
+        "lag_1h": 72.5,
+        "rolling_mean_24h": 93.86
+    },
+    {
+        "timestamp": "2017-02-19 20:00:00",
+        "pm10": 155.0,
+        "iso_score": -0.1367,
+        "hour": 20,
+        "month": 2,
+        "lag_1h": 159.25,
+        "rolling_mean_24h": 103.51
+    },
+    {
+        "timestamp": "2017-02-19 21:00:00",
+        "pm10": 128.75,
+        "iso_score": -0.2515,
+        "hour": 21,
+        "month": 2,
+        "lag_1h": 155.0,
+        "rolling_mean_24h": 106.21
+    },
+    {
+        "timestamp": "2017-02-19 22:00:00",
+        "pm10": 92.75,
+        "iso_score": -0.2759,
+        "hour": 22,
+        "month": 2,
+        "lag_1h": 128.75,
+        "rolling_mean_24h": 107.66
+    },
+    {
+        "timestamp": "2017-02-19 23:00:00",
+        "pm10": 91.0,
+        "iso_score": -0.1449,
+        "hour": 23,
+        "month": 2,
+        "lag_1h": 92.75,
+        "rolling_mean_24h": 106.94
+    },
+    {
+        "timestamp": "2017-02-21 08:00:00",
+        "pm10": 165.5,
+        "iso_score": -1.5225,
+        "hour": 8,
+        "month": 2,
+        "lag_1h": 196.0,
+        "rolling_mean_24h": 98.94
+    },
+    {
+        "timestamp": "2017-02-21 09:00:00",
+        "pm10": 110.75,
+        "iso_score": -1.0351,
+        "hour": 9,
+        "month": 2,
+        "lag_1h": 165.5,
+        "rolling_mean_24h": 101.79
+    },
+    {
+        "timestamp": "2017-02-21 10:00:00",
+        "pm10": 95.25,
+        "iso_score": -1.1471,
+        "hour": 10,
+        "month": 2,
+        "lag_1h": 110.75,
+        "rolling_mean_24h": 101.52
+    },
+    {
+        "timestamp": "2017-02-21 11:00:00",
+        "pm10": 135.25,
+        "iso_score": -0.417,
+        "hour": 11,
+        "month": 2,
+        "lag_1h": 95.25,
+        "rolling_mean_24h": 101.92
+    },
+    {
+        "timestamp": "2017-02-21 13:00:00",
+        "pm10": 73.0,
+        "iso_score": -0.7337,
+        "hour": 13,
+        "month": 2,
+        "lag_1h": 147.75,
+        "rolling_mean_24h": 107.41
+    },
+    {
+        "timestamp": "2017-02-21 14:00:00",
+        "pm10": 68.0,
+        "iso_score": -0.6659,
+        "hour": 14,
+        "month": 2,
+        "lag_1h": 73.0,
+        "rolling_mean_24h": 107.54
+    },
+    {
+        "timestamp": "2017-02-21 15:00:00",
+        "pm10": 73.75,
+        "iso_score": -0.8198,
+        "hour": 15,
+        "month": 2,
+        "lag_1h": 68.0,
+        "rolling_mean_24h": 107.56
+    },
+    {
+        "timestamp": "2017-02-21 19:00:00",
+        "pm10": 104.75,
+        "iso_score": -0.3708,
+        "hour": 19,
+        "month": 2,
+        "lag_1h": 86.5,
+        "rolling_mean_24h": 107.33
+    },
+    {
+        "timestamp": "2017-02-22 07:00:00",
+        "pm10": 124.25,
+        "iso_score": -0.2562,
+        "hour": 7,
+        "month": 2,
+        "lag_1h": 81.5,
+        "rolling_mean_24h": 96.23
+    },
+    {
+        "timestamp": "2017-02-22 08:00:00",
+        "pm10": 102.5,
+        "iso_score": -0.1815,
+        "hour": 8,
+        "month": 2,
+        "lag_1h": 124.25,
+        "rolling_mean_24h": 93.24
+    },
+    {
+        "timestamp": "2017-02-23 07:00:00",
+        "pm10": 181.0,
+        "iso_score": -0.3871,
+        "hour": 7,
+        "month": 2,
+        "lag_1h": 133.25,
+        "rolling_mean_24h": 92.44
+    },
+    {
+        "timestamp": "2017-02-23 08:00:00",
+        "pm10": 102.25,
+        "iso_score": -1.5171,
+        "hour": 8,
+        "month": 2,
+        "lag_1h": 181.0,
+        "rolling_mean_24h": 94.8
+    },
+    {
+        "timestamp": "2017-02-23 09:00:00",
+        "pm10": 107.25,
+        "iso_score": -0.6987,
+        "hour": 9,
+        "month": 2,
+        "lag_1h": 102.25,
+        "rolling_mean_24h": 94.79
+    },
+    {
+        "timestamp": "2017-02-23 10:00:00",
+        "pm10": 73.0,
+        "iso_score": -0.9231,
+        "hour": 10,
+        "month": 2,
+        "lag_1h": 107.25,
+        "rolling_mean_24h": 95.53
+    },
+    {
+        "timestamp": "2017-02-26 07:00:00",
+        "pm10": 141.5,
+        "iso_score": -0.0107,
+        "hour": 7,
+        "month": 2,
+        "lag_1h": 110.5,
+        "rolling_mean_24h": 74.58
+    },
+    {
+        "timestamp": "2017-02-26 10:00:00",
+        "pm10": 92.5,
+        "iso_score": -0.1037,
+        "hour": 10,
+        "month": 2,
+        "lag_1h": 76.25,
+        "rolling_mean_24h": 79.88
+    },
+    {
+        "timestamp": "2017-02-27 16:00:00",
+        "pm10": 92.25,
+        "iso_score": -1.4648,
+        "hour": 16,
+        "month": 2,
+        "lag_1h": 171.0,
+        "rolling_mean_24h": 81.84
+    },
+    {
+        "timestamp": "2017-02-27 17:00:00",
+        "pm10": 61.75,
+        "iso_score": -1.007,
+        "hour": 17,
+        "month": 2,
+        "lag_1h": 92.25,
+        "rolling_mean_24h": 82.79
+    },
+    {
+        "timestamp": "2017-02-27 18:00:00",
+        "pm10": 72.0,
+        "iso_score": -1.6283,
+        "hour": 18,
+        "month": 2,
+        "lag_1h": 61.75,
+        "rolling_mean_24h": 81.8
+    },
+    {
+        "timestamp": "2017-02-28 11:00:00",
+        "pm10": 59.25,
+        "iso_score": -0.0118,
+        "hour": 11,
+        "month": 2,
+        "lag_1h": 33.5,
+        "rolling_mean_24h": 77.99
+    },
+    {
+        "timestamp": "2017-03-02 09:00:00",
+        "pm10": 49.75,
+        "iso_score": -0.3962,
+        "hour": 9,
+        "month": 3,
+        "lag_1h": 104.75,
+        "rolling_mean_24h": 62.36
+    },
+    {
+        "timestamp": "2017-03-02 11:00:00",
+        "pm10": 39.0,
+        "iso_score": -0.0523,
+        "hour": 11,
+        "month": 3,
+        "lag_1h": 29.0,
+        "rolling_mean_24h": 62.6
+    },
+    {
+        "timestamp": "2017-03-04 08:00:00",
+        "pm10": 63.5,
+        "iso_score": -0.4692,
+        "hour": 8,
+        "month": 3,
+        "lag_1h": 119.75,
+        "rolling_mean_24h": 57.23
+    },
+    {
+        "timestamp": "2017-03-04 10:00:00",
+        "pm10": 87.0,
+        "iso_score": -0.0302,
+        "hour": 10,
+        "month": 3,
+        "lag_1h": 50.0,
+        "rolling_mean_24h": 58.82
+    },
+    {
+        "timestamp": "2017-03-12 00:00:00",
+        "pm10": 33.25,
+        "iso_score": -0.0734,
+        "hour": 0,
+        "month": 3,
+        "lag_1h": 78.0,
+        "rolling_mean_24h": 63.7
+    },
+    {
+        "timestamp": "2017-03-12 01:00:00",
+        "pm10": 44.0,
+        "iso_score": -0.1101,
+        "hour": 1,
+        "month": 3,
+        "lag_1h": 33.25,
+        "rolling_mean_24h": 64.46
+    },
+    {
+        "timestamp": "2017-03-23 22:00:00",
+        "pm10": 99.5,
+        "iso_score": -0.0899,
+        "hour": 22,
+        "month": 3,
+        "lag_1h": 120.75,
+        "rolling_mean_24h": 83.84
+    },
+    {
+        "timestamp": "2017-03-24 08:00:00",
+        "pm10": 54.0,
+        "iso_score": -0.0398,
+        "hour": 8,
+        "month": 3,
+        "lag_1h": 160.75,
+        "rolling_mean_24h": 95.14
+    },
+    {
+        "timestamp": "2017-03-24 09:00:00",
+        "pm10": 77.25,
+        "iso_score": -1.4137,
+        "hour": 9,
+        "month": 3,
+        "lag_1h": 54.0,
+        "rolling_mean_24h": 92.85
+    },
+    {
+        "timestamp": "2017-03-24 10:00:00",
+        "pm10": 71.25,
+        "iso_score": -1.5027,
+        "hour": 10,
+        "month": 3,
+        "lag_1h": 77.25,
+        "rolling_mean_24h": 92.32
+    },
+    {
+        "timestamp": "2017-03-24 21:00:00",
+        "pm10": 88.5,
+        "iso_score": -1.2826,
+        "hour": 21,
+        "month": 3,
+        "lag_1h": 31.25,
+        "rolling_mean_24h": 89.4
+    },
+    {
+        "timestamp": "2017-03-24 22:00:00",
+        "pm10": 51.0,
+        "iso_score": -1.0029,
+        "hour": 22,
+        "month": 3,
+        "lag_1h": 88.5,
+        "rolling_mean_24h": 88.05
+    },
+    {
+        "timestamp": "2017-03-25 08:00:00",
+        "pm10": 72.0,
+        "iso_score": -1.068,
+        "hour": 8,
+        "month": 3,
+        "lag_1h": 164.25,
+        "rolling_mean_24h": 80.72
+    },
+    {
+        "timestamp": "2017-03-25 09:00:00",
+        "pm10": 135.75,
+        "iso_score": -1.4514,
+        "hour": 9,
+        "month": 3,
+        "lag_1h": 72.0,
+        "rolling_mean_24h": 81.47
+    },
+    {
+        "timestamp": "2017-03-25 10:00:00",
+        "pm10": 82.5,
+        "iso_score": -1.0465,
+        "hour": 10,
+        "month": 3,
+        "lag_1h": 135.75,
+        "rolling_mean_24h": 83.9
+    },
+    {
+        "timestamp": "2017-03-25 11:00:00",
+        "pm10": 104.0,
+        "iso_score": -0.0117,
+        "hour": 11,
+        "month": 3,
+        "lag_1h": 82.5,
+        "rolling_mean_24h": 84.37
+    },
+    {
+        "timestamp": "2017-03-25 13:00:00",
+        "pm10": 43.0,
+        "iso_score": -0.5365,
+        "hour": 13,
+        "month": 3,
+        "lag_1h": 23.0,
+        "rolling_mean_24h": 84.05
+    },
+    {
+        "timestamp": "2017-03-25 14:00:00",
+        "pm10": 61.25,
+        "iso_score": -0.4428,
+        "hour": 14,
+        "month": 3,
+        "lag_1h": 43.0,
+        "rolling_mean_24h": 84.05
+    },
+    {
+        "timestamp": "2017-03-26 08:00:00",
+        "pm10": 188.25,
+        "iso_score": -1.8068,
+        "hour": 8,
+        "month": 3,
+        "lag_1h": 178.25,
+        "rolling_mean_24h": 87.92
+    },
+    {
+        "timestamp": "2017-03-26 09:00:00",
+        "pm10": 69.25,
+        "iso_score": -1.1529,
+        "hour": 9,
+        "month": 3,
+        "lag_1h": 188.25,
+        "rolling_mean_24h": 92.76
+    },
+    {
+        "timestamp": "2017-03-26 10:00:00",
+        "pm10": 79.25,
+        "iso_score": -2.5633,
+        "hour": 10,
+        "month": 3,
+        "lag_1h": 69.25,
+        "rolling_mean_24h": 89.99
+    },
+    {
+        "timestamp": "2017-03-26 11:00:00",
+        "pm10": 77.75,
+        "iso_score": -2.4019,
+        "hour": 11,
+        "month": 3,
+        "lag_1h": 79.25,
+        "rolling_mean_24h": 89.85
+    },
+    {
+        "timestamp": "2017-03-26 14:00:00",
+        "pm10": 63.75,
+        "iso_score": -0.1648,
+        "hour": 14,
+        "month": 3,
+        "lag_1h": 41.5,
+        "rolling_mean_24h": 90.8
+    },
+    {
+        "timestamp": "2017-03-26 19:00:00",
+        "pm10": 72.0,
+        "iso_score": -0.0257,
+        "hour": 19,
+        "month": 3,
+        "lag_1h": 68.25,
+        "rolling_mean_24h": 89.54
+    },
+    {
+        "timestamp": "2017-03-26 20:00:00",
+        "pm10": 109.25,
+        "iso_score": -0.1845,
+        "hour": 20,
+        "month": 3,
+        "lag_1h": 72.0,
+        "rolling_mean_24h": 87.3
+    },
+    {
+        "timestamp": "2017-03-27 08:00:00",
+        "pm10": 100.0,
+        "iso_score": -0.2424,
+        "hour": 8,
+        "month": 3,
+        "lag_1h": 97.25,
+        "rolling_mean_24h": 67.15
+    },
+    {
+        "timestamp": "2017-03-30 12:00:00",
+        "pm10": 56.25,
+        "iso_score": -0.2626,
+        "hour": 12,
+        "month": 3,
+        "lag_1h": 111.75,
+        "rolling_mean_24h": 51.64
+    },
+    {
+        "timestamp": "2017-03-31 08:00:00",
+        "pm10": 142.0,
+        "iso_score": -0.4638,
+        "hour": 8,
+        "month": 3,
+        "lag_1h": 144.5,
+        "rolling_mean_24h": 60.3
+    },
+    {
+        "timestamp": "2017-03-31 10:00:00",
+        "pm10": 49.25,
+        "iso_score": -0.623,
+        "hour": 10,
+        "month": 3,
+        "lag_1h": 68.5,
+        "rolling_mean_24h": 65.91
+    },
+    {
+        "timestamp": "2017-03-31 11:00:00",
+        "pm10": 58.0,
+        "iso_score": -0.9286,
+        "hour": 11,
+        "month": 3,
+        "lag_1h": 49.25,
+        "rolling_mean_24h": 65.86
+    },
+    {
+        "timestamp": "2017-04-01 08:00:00",
+        "pm10": 111.25,
+        "iso_score": -0.1466,
+        "hour": 8,
+        "month": 4,
+        "lag_1h": 116.0,
+        "rolling_mean_24h": 57.0
+    },
+    {
+        "timestamp": "2017-04-01 10:00:00",
+        "pm10": 41.75,
+        "iso_score": -0.1086,
+        "hour": 10,
+        "month": 4,
+        "lag_1h": 48.5,
+        "rolling_mean_24h": 54.89
+    },
+    {
+        "timestamp": "2017-04-01 11:00:00",
+        "pm10": 66.5,
+        "iso_score": -0.0535,
+        "hour": 11,
+        "month": 4,
+        "lag_1h": 41.75,
+        "rolling_mean_24h": 54.57
+    },
+    {
+        "timestamp": "2017-04-05 08:00:00",
+        "pm10": 81.0,
+        "iso_score": -0.6675,
+        "hour": 8,
+        "month": 4,
+        "lag_1h": 118.5,
+        "rolling_mean_24h": 63.73
+    },
+    {
+        "timestamp": "2017-04-05 10:00:00",
+        "pm10": 70.5,
+        "iso_score": -1.9171,
+        "hour": 10,
+        "month": 4,
+        "lag_1h": 196.75,
+        "rolling_mean_24h": 68.47
+    },
+    {
+        "timestamp": "2017-04-05 11:00:00",
+        "pm10": 96.0,
+        "iso_score": -2.5598,
+        "hour": 11,
+        "month": 4,
+        "lag_1h": 70.5,
+        "rolling_mean_24h": 68.3
+    },
+    {
+        "timestamp": "2017-04-05 12:00:00",
+        "pm10": 90.5,
+        "iso_score": -2.3026,
+        "hour": 12,
+        "month": 4,
+        "lag_1h": 96.0,
+        "rolling_mean_24h": 68.8
+    },
+    {
+        "timestamp": "2017-04-05 15:00:00",
+        "pm10": 95.5,
+        "iso_score": -0.2677,
+        "hour": 15,
+        "month": 4,
+        "lag_1h": 71.25,
+        "rolling_mean_24h": 71.85
+    },
+    {
+        "timestamp": "2017-04-05 21:00:00",
+        "pm10": 71.0,
+        "iso_score": -0.3785,
+        "hour": 21,
+        "month": 4,
+        "lag_1h": 46.5,
+        "rolling_mean_24h": 73.65
+    },
+    {
+        "timestamp": "2017-04-06 09:00:00",
+        "pm10": 68.0,
+        "iso_score": -0.2163,
+        "hour": 9,
+        "month": 4,
+        "lag_1h": 73.75,
+        "rolling_mean_24h": 82.39
+    },
+    {
+        "timestamp": "2017-04-07 13:00:00",
+        "pm10": 99.0,
+        "iso_score": -0.1952,
+        "hour": 13,
+        "month": 4,
+        "lag_1h": 130.0,
+        "rolling_mean_24h": 77.28
+    },
+    {
+        "timestamp": "2017-04-08 18:00:00",
+        "pm10": 117.5,
+        "iso_score": -0.7639,
+        "hour": 18,
+        "month": 4,
+        "lag_1h": 185.25,
+        "rolling_mean_24h": 92.53
+    },
+    {
+        "timestamp": "2017-04-08 19:00:00",
+        "pm10": 128.25,
+        "iso_score": -0.704,
+        "hour": 19,
+        "month": 4,
+        "lag_1h": 117.5,
+        "rolling_mean_24h": 93.78
+    },
+    {
+        "timestamp": "2017-04-08 20:00:00",
+        "pm10": 120.5,
+        "iso_score": -0.7134,
+        "hour": 20,
+        "month": 4,
+        "lag_1h": 128.25,
+        "rolling_mean_24h": 93.7
+    },
+    {
+        "timestamp": "2017-04-08 23:00:00",
+        "pm10": 91.75,
+        "iso_score": -0.4387,
+        "hour": 23,
+        "month": 4,
+        "lag_1h": 103.75,
+        "rolling_mean_24h": 93.61
+    },
+    {
+        "timestamp": "2017-04-09 05:00:00",
+        "pm10": 58.75,
+        "iso_score": -0.0319,
+        "hour": 5,
+        "month": 4,
+        "lag_1h": 64.75,
+        "rolling_mean_24h": 90.21
+    },
+    {
+        "timestamp": "2017-04-09 08:00:00",
+        "pm10": 151.25,
+        "iso_score": -2.4448,
+        "hour": 8,
+        "month": 4,
+        "lag_1h": 190.0,
+        "rolling_mean_24h": 98.18
+    },
+    {
+        "timestamp": "2017-04-09 09:00:00",
+        "pm10": 182.0,
+        "iso_score": -0.8001,
+        "hour": 9,
+        "month": 4,
+        "lag_1h": 151.25,
+        "rolling_mean_24h": 102.62
+    },
+    {
+        "timestamp": "2017-04-09 10:00:00",
+        "pm10": 104.25,
+        "iso_score": -0.898,
+        "hour": 10,
+        "month": 4,
+        "lag_1h": 182.0,
+        "rolling_mean_24h": 108.65
+    },
+    {
+        "timestamp": "2017-04-09 11:00:00",
+        "pm10": 96.0,
+        "iso_score": -0.7592,
+        "hour": 11,
+        "month": 4,
+        "lag_1h": 104.25,
+        "rolling_mean_24h": 109.59
+    },
+    {
+        "timestamp": "2017-04-09 12:00:00",
+        "pm10": 115.33,
+        "iso_score": -1.2725,
+        "hour": 12,
+        "month": 4,
+        "lag_1h": 96.0,
+        "rolling_mean_24h": 109.52
+    },
+    {
+        "timestamp": "2017-04-09 13:00:00",
+        "pm10": 100.0,
+        "iso_score": -0.4337,
+        "hour": 13,
+        "month": 4,
+        "lag_1h": 115.33,
+        "rolling_mean_24h": 110.67
+    },
+    {
+        "timestamp": "2017-04-09 15:00:00",
+        "pm10": 89.0,
+        "iso_score": -0.3389,
+        "hour": 15,
+        "month": 4,
+        "lag_1h": 107.0,
+        "rolling_mean_24h": 111.99
+    },
+    {
+        "timestamp": "2017-04-09 17:00:00",
+        "pm10": 77.25,
+        "iso_score": -0.2984,
+        "hour": 17,
+        "month": 4,
+        "lag_1h": 93.5,
+        "rolling_mean_24h": 109.3
+    },
+    {
+        "timestamp": "2017-04-09 19:00:00",
+        "pm10": 118.25,
+        "iso_score": -0.378,
+        "hour": 19,
+        "month": 4,
+        "lag_1h": 94.5,
+        "rolling_mean_24h": 103.84
+    },
+    {
+        "timestamp": "2017-04-09 21:00:00",
+        "pm10": 130.25,
+        "iso_score": -0.4313,
+        "hour": 21,
+        "month": 4,
+        "lag_1h": 124.5,
+        "rolling_mean_24h": 103.59
+    },
+    {
+        "timestamp": "2017-04-10 07:00:00",
+        "pm10": 145.5,
+        "iso_score": -0.3047,
+        "hour": 7,
+        "month": 4,
+        "lag_1h": 98.25,
+        "rolling_mean_24h": 105.91
+    },
+    {
+        "timestamp": "2017-04-10 08:00:00",
+        "pm10": 105.25,
+        "iso_score": -0.0573,
+        "hour": 8,
+        "month": 4,
+        "lag_1h": 145.5,
+        "rolling_mean_24h": 104.06
+    },
+    {
+        "timestamp": "2017-04-10 09:00:00",
+        "pm10": 80.25,
+        "iso_score": -0.4451,
+        "hour": 9,
+        "month": 4,
+        "lag_1h": 105.25,
+        "rolling_mean_24h": 102.14
+    },
+    {
+        "timestamp": "2017-04-11 08:00:00",
+        "pm10": 226.5,
+        "iso_score": -3.3179,
+        "hour": 8,
+        "month": 4,
+        "lag_1h": 225.5,
+        "rolling_mean_24h": 105.44
+    },
+    {
+        "timestamp": "2017-04-11 09:00:00",
+        "pm10": 96.5,
+        "iso_score": -2.6585,
+        "hour": 9,
+        "month": 4,
+        "lag_1h": 226.5,
+        "rolling_mean_24h": 110.49
+    },
+    {
+        "timestamp": "2017-04-11 10:00:00",
+        "pm10": 99.67,
+        "iso_score": -3.461,
+        "hour": 10,
+        "month": 4,
+        "lag_1h": 96.5,
+        "rolling_mean_24h": 111.17
+    },
+    {
+        "timestamp": "2017-04-11 11:00:00",
+        "pm10": 102.0,
+        "iso_score": -3.1718,
+        "hour": 11,
+        "month": 4,
+        "lag_1h": 99.67,
+        "rolling_mean_24h": 111.76
+    },
+    {
+        "timestamp": "2017-04-11 13:00:00",
+        "pm10": 90.25,
+        "iso_score": -0.9334,
+        "hour": 13,
+        "month": 4,
+        "lag_1h": 96.25,
+        "rolling_mean_24h": 111.7
+    },
+    {
+        "timestamp": "2017-04-11 14:00:00",
+        "pm10": 74.5,
+        "iso_score": -0.9491,
+        "hour": 14,
+        "month": 4,
+        "lag_1h": 90.25,
+        "rolling_mean_24h": 112.73
+    },
+    {
+        "timestamp": "2017-04-11 19:00:00",
+        "pm10": 108.0,
+        "iso_score": -0.9985,
+        "hour": 19,
+        "month": 4,
+        "lag_1h": 94.25,
+        "rolling_mean_24h": 112.37
+    },
+    {
+        "timestamp": "2017-04-11 20:00:00",
+        "pm10": 126.25,
+        "iso_score": -1.0061,
+        "hour": 20,
+        "month": 4,
+        "lag_1h": 108.0,
+        "rolling_mean_24h": 111.8
+    },
+    {
+        "timestamp": "2017-04-12 07:00:00",
+        "pm10": 155.5,
+        "iso_score": -0.9563,
+        "hour": 7,
+        "month": 4,
+        "lag_1h": 109.0,
+        "rolling_mean_24h": 111.99
+    },
+    {
+        "timestamp": "2017-04-12 08:00:00",
+        "pm10": 118.25,
+        "iso_score": -1.2529,
+        "hour": 8,
+        "month": 4,
+        "lag_1h": 155.5,
+        "rolling_mean_24h": 109.07
+    },
+    {
+        "timestamp": "2017-04-13 08:00:00",
+        "pm10": 174.25,
+        "iso_score": -0.5283,
+        "hour": 8,
+        "month": 4,
+        "lag_1h": 179.33,
+        "rolling_mean_24h": 114.1
+    },
+    {
+        "timestamp": "2017-04-13 09:00:00",
+        "pm10": 119.5,
+        "iso_score": -0.5666,
+        "hour": 9,
+        "month": 4,
+        "lag_1h": 174.25,
+        "rolling_mean_24h": 116.44
+    },
+    {
+        "timestamp": "2017-04-13 10:00:00",
+        "pm10": 82.5,
+        "iso_score": -0.5516,
+        "hour": 10,
+        "month": 4,
+        "lag_1h": 119.5,
+        "rolling_mean_24h": 117.39
+    },
+    {
+        "timestamp": "2017-04-13 11:00:00",
+        "pm10": 75.0,
+        "iso_score": -1.0326,
+        "hour": 11,
+        "month": 4,
+        "lag_1h": 82.5,
+        "rolling_mean_24h": 117.09
+    },
+    {
+        "timestamp": "2017-04-13 13:00:00",
+        "pm10": 112.5,
+        "iso_score": -0.0147,
+        "hour": 13,
+        "month": 4,
+        "lag_1h": 103.25,
+        "rolling_mean_24h": 116.1
+    },
+    {
+        "timestamp": "2017-04-13 14:00:00",
+        "pm10": 100.25,
+        "iso_score": -0.039,
+        "hour": 14,
+        "month": 4,
+        "lag_1h": 112.5,
+        "rolling_mean_24h": 116.71
+    },
+    {
+        "timestamp": "2017-04-13 19:00:00",
+        "pm10": 108.25,
+        "iso_score": -0.3288,
+        "hour": 19,
+        "month": 4,
+        "lag_1h": 131.25,
+        "rolling_mean_24h": 112.92
+    },
+    {
+        "timestamp": "2017-04-13 20:00:00",
+        "pm10": 99.75,
+        "iso_score": -0.245,
+        "hour": 20,
+        "month": 4,
+        "lag_1h": 108.25,
+        "rolling_mean_24h": 111.71
+    },
+    {
+        "timestamp": "2017-04-14 07:00:00",
+        "pm10": 141.25,
+        "iso_score": -0.4132,
+        "hour": 7,
+        "month": 4,
+        "lag_1h": 136.61,
+        "rolling_mean_24h": 112.31
+    },
+    {
+        "timestamp": "2017-04-14 08:00:00",
+        "pm10": 166.5,
+        "iso_score": -0.3457,
+        "hour": 8,
+        "month": 4,
+        "lag_1h": 141.25,
+        "rolling_mean_24h": 110.72
+    },
+    {
+        "timestamp": "2017-04-14 09:00:00",
+        "pm10": 120.75,
+        "iso_score": -0.2758,
+        "hour": 9,
+        "month": 4,
+        "lag_1h": 166.5,
+        "rolling_mean_24h": 110.4
+    },
+    {
+        "timestamp": "2017-04-14 10:00:00",
+        "pm10": 97.0,
+        "iso_score": -0.2096,
+        "hour": 10,
+        "month": 4,
+        "lag_1h": 120.75,
+        "rolling_mean_24h": 110.45
+    },
+    {
+        "timestamp": "2017-04-14 11:00:00",
+        "pm10": 103.25,
+        "iso_score": -0.2864,
+        "hour": 11,
+        "month": 4,
+        "lag_1h": 97.0,
+        "rolling_mean_24h": 111.05
+    },
+    {
+        "timestamp": "2017-04-14 20:00:00",
+        "pm10": 135.5,
+        "iso_score": -0.1079,
+        "hour": 20,
+        "month": 4,
+        "lag_1h": 142.5,
+        "rolling_mean_24h": 112.25
+    },
+    {
+        "timestamp": "2017-04-15 08:00:00",
+        "pm10": 226.25,
+        "iso_score": -1.4392,
+        "hour": 8,
+        "month": 4,
+        "lag_1h": 182.75,
+        "rolling_mean_24h": 105.72
+    },
+    {
+        "timestamp": "2017-04-15 09:00:00",
+        "pm10": 107.25,
+        "iso_score": -2.875,
+        "hour": 9,
+        "month": 4,
+        "lag_1h": 226.25,
+        "rolling_mean_24h": 108.21
+    },
+    {
+        "timestamp": "2017-04-15 10:00:00",
+        "pm10": 122.5,
+        "iso_score": -2.4046,
+        "hour": 10,
+        "month": 4,
+        "lag_1h": 107.25,
+        "rolling_mean_24h": 107.65
+    },
+    {
+        "timestamp": "2017-04-15 11:00:00",
+        "pm10": 135.75,
+        "iso_score": -2.606,
+        "hour": 11,
+        "month": 4,
+        "lag_1h": 122.5,
+        "rolling_mean_24h": 108.71
+    },
+    {
+        "timestamp": "2017-04-15 13:00:00",
+        "pm10": 125.0,
+        "iso_score": -0.4732,
+        "hour": 13,
+        "month": 4,
+        "lag_1h": 125.0,
+        "rolling_mean_24h": 112.3
+    },
+    {
+        "timestamp": "2017-04-15 14:00:00",
+        "pm10": 134.5,
+        "iso_score": -1.1794,
+        "hour": 14,
+        "month": 4,
+        "lag_1h": 125.0,
+        "rolling_mean_24h": 113.69
+    },
+    {
+        "timestamp": "2017-04-15 19:00:00",
+        "pm10": 145.25,
+        "iso_score": -0.6202,
+        "hour": 19,
+        "month": 4,
+        "lag_1h": 137.0,
+        "rolling_mean_24h": 120.54
+    },
+    {
+        "timestamp": "2017-04-15 20:00:00",
+        "pm10": 154.25,
+        "iso_score": -1.4105,
+        "hour": 20,
+        "month": 4,
+        "lag_1h": 145.25,
+        "rolling_mean_24h": 120.66
+    },
+    {
+        "timestamp": "2017-04-15 21:00:00",
+        "pm10": 67.0,
+        "iso_score": -0.2069,
+        "hour": 21,
+        "month": 4,
+        "lag_1h": 154.25,
+        "rolling_mean_24h": 121.44
+    },
+    {
+        "timestamp": "2017-04-15 23:00:00",
+        "pm10": 144.75,
+        "iso_score": -0.945,
+        "hour": 23,
+        "month": 4,
+        "lag_1h": 105.88,
+        "rolling_mean_24h": 119.68
+    },
+    {
+        "timestamp": "2017-04-16 00:00:00",
+        "pm10": 140.75,
+        "iso_score": -0.5621,
+        "hour": 0,
+        "month": 4,
+        "lag_1h": 144.75,
+        "rolling_mean_24h": 122.21
+    },
+    {
+        "timestamp": "2017-04-16 01:00:00",
+        "pm10": 120.5,
+        "iso_score": -0.0478,
+        "hour": 1,
+        "month": 4,
+        "lag_1h": 140.75,
+        "rolling_mean_24h": 125.79
+    },
+    {
+        "timestamp": "2017-04-16 02:00:00",
+        "pm10": 117.0,
+        "iso_score": -0.1877,
+        "hour": 2,
+        "month": 4,
+        "lag_1h": 120.5,
+        "rolling_mean_24h": 126.09
+    },
+    {
+        "timestamp": "2017-04-16 07:00:00",
+        "pm10": 138.5,
+        "iso_score": -0.6298,
+        "hour": 7,
+        "month": 4,
+        "lag_1h": 143.5,
+        "rolling_mean_24h": 132.46
+    },
+    {
+        "timestamp": "2017-04-16 08:00:00",
+        "pm10": 138.75,
+        "iso_score": -1.3924,
+        "hour": 8,
+        "month": 4,
+        "lag_1h": 138.5,
+        "rolling_mean_24h": 130.62
+    },
+    {
+        "timestamp": "2017-04-16 09:00:00",
+        "pm10": 138.0,
+        "iso_score": -0.0182,
+        "hour": 9,
+        "month": 4,
+        "lag_1h": 138.75,
+        "rolling_mean_24h": 126.97
+    },
+    {
+        "timestamp": "2017-04-16 10:00:00",
+        "pm10": 123.75,
+        "iso_score": -0.0626,
+        "hour": 10,
+        "month": 4,
+        "lag_1h": 138.0,
+        "rolling_mean_24h": 128.26
+    },
+    {
+        "timestamp": "2017-04-16 20:00:00",
+        "pm10": 171.25,
+        "iso_score": -0.2081,
+        "hour": 20,
+        "month": 4,
+        "lag_1h": 150.0,
+        "rolling_mean_24h": 120.95
+    },
+    {
+        "timestamp": "2017-04-16 21:00:00",
+        "pm10": 136.0,
+        "iso_score": -0.6592,
+        "hour": 21,
+        "month": 4,
+        "lag_1h": 171.25,
+        "rolling_mean_24h": 121.66
+    },
+    {
+        "timestamp": "2017-04-17 20:00:00",
+        "pm10": 100.5,
+        "iso_score": -0.1031,
+        "hour": 20,
+        "month": 4,
+        "lag_1h": 59.25,
+        "rolling_mean_24h": 116.81
+    },
+    {
+        "timestamp": "2017-04-18 20:00:00",
+        "pm10": 176.25,
+        "iso_score": -0.6072,
+        "hour": 20,
+        "month": 4,
+        "lag_1h": 181.5,
+        "rolling_mean_24h": 110.15
+    },
+    {
+        "timestamp": "2017-04-18 21:00:00",
+        "pm10": 73.0,
+        "iso_score": -0.795,
+        "hour": 21,
+        "month": 4,
+        "lag_1h": 176.25,
+        "rolling_mean_24h": 113.3
+    },
+    {
+        "timestamp": "2017-04-18 22:00:00",
+        "pm10": 131.0,
+        "iso_score": -2.2322,
+        "hour": 22,
+        "month": 4,
+        "lag_1h": 73.0,
+        "rolling_mean_24h": 112.99
+    },
+    {
+        "timestamp": "2017-04-18 23:00:00",
+        "pm10": 116.5,
+        "iso_score": -1.5159,
+        "hour": 23,
+        "month": 4,
+        "lag_1h": 131.0,
+        "rolling_mean_24h": 115.68
+    },
+    {
+        "timestamp": "2017-04-19 01:00:00",
+        "pm10": 118.75,
+        "iso_score": -1.6723,
+        "hour": 1,
+        "month": 4,
+        "lag_1h": 29.5,
+        "rolling_mean_24h": 114.4
+    },
+    {
+        "timestamp": "2017-04-19 02:00:00",
+        "pm10": 57.5,
+        "iso_score": -1.3994,
+        "hour": 2,
+        "month": 4,
+        "lag_1h": 118.75,
+        "rolling_mean_24h": 114.82
+    },
+    {
+        "timestamp": "2017-04-19 03:00:00",
+        "pm10": 104.5,
+        "iso_score": -0.7632,
+        "hour": 3,
+        "month": 4,
+        "lag_1h": 57.5,
+        "rolling_mean_24h": 111.74
+    },
+    {
+        "timestamp": "2017-04-19 07:00:00",
+        "pm10": 184.5,
+        "iso_score": -0.3407,
+        "hour": 7,
+        "month": 4,
+        "lag_1h": 127.75,
+        "rolling_mean_24h": 113.45
+    },
+    {
+        "timestamp": "2017-04-19 08:00:00",
+        "pm10": 132.0,
+        "iso_score": -1.2255,
+        "hour": 8,
+        "month": 4,
+        "lag_1h": 184.5,
+        "rolling_mean_24h": 115.98
+    },
+    {
+        "timestamp": "2017-04-19 09:00:00",
+        "pm10": 162.0,
+        "iso_score": -0.6316,
+        "hour": 9,
+        "month": 4,
+        "lag_1h": 132.0,
+        "rolling_mean_24h": 117.1
+    },
+    {
+        "timestamp": "2017-04-19 10:00:00",
+        "pm10": 118.0,
+        "iso_score": -0.7493,
+        "hour": 10,
+        "month": 4,
+        "lag_1h": 162.0,
+        "rolling_mean_24h": 119.33
+    },
+    {
+        "timestamp": "2017-04-19 11:00:00",
+        "pm10": 113.0,
+        "iso_score": -0.1691,
+        "hour": 11,
+        "month": 4,
+        "lag_1h": 118.0,
+        "rolling_mean_24h": 119.58
+    },
+    {
+        "timestamp": "2017-04-19 12:00:00",
+        "pm10": 112.75,
+        "iso_score": -0.1575,
+        "hour": 12,
+        "month": 4,
+        "lag_1h": 113.0,
+        "rolling_mean_24h": 119.61
+    },
+    {
+        "timestamp": "2017-04-19 13:00:00",
+        "pm10": 52.5,
+        "iso_score": -0.4193,
+        "hour": 13,
+        "month": 4,
+        "lag_1h": 112.75,
+        "rolling_mean_24h": 119.58
+    },
+    {
+        "timestamp": "2017-04-19 14:00:00",
+        "pm10": 111.0,
+        "iso_score": -0.064,
+        "hour": 14,
+        "month": 4,
+        "lag_1h": 52.5,
+        "rolling_mean_24h": 116.86
+    },
+    {
+        "timestamp": "2017-04-19 15:00:00",
+        "pm10": 121.0,
+        "iso_score": -0.1323,
+        "hour": 15,
+        "month": 4,
+        "lag_1h": 111.0,
+        "rolling_mean_24h": 116.15
+    },
+    {
+        "timestamp": "2017-04-19 16:00:00",
+        "pm10": 119.67,
+        "iso_score": -0.2695,
+        "hour": 16,
+        "month": 4,
+        "lag_1h": 121.0,
+        "rolling_mean_24h": 115.62
+    },
+    {
+        "timestamp": "2017-04-19 19:00:00",
+        "pm10": 171.5,
+        "iso_score": -1.0001,
+        "hour": 19,
+        "month": 4,
+        "lag_1h": 155.25,
+        "rolling_mean_24h": 114.85
+    },
+    {
+        "timestamp": "2017-04-19 20:00:00",
+        "pm10": 68.5,
+        "iso_score": -1.9167,
+        "hour": 20,
+        "month": 4,
+        "lag_1h": 171.5,
+        "rolling_mean_24h": 114.43
+    },
+    {
+        "timestamp": "2017-04-19 21:00:00",
+        "pm10": 121.5,
+        "iso_score": -1.8409,
+        "hour": 21,
+        "month": 4,
+        "lag_1h": 68.5,
+        "rolling_mean_24h": 109.94
+    },
+    {
+        "timestamp": "2017-04-19 22:00:00",
+        "pm10": 117.0,
+        "iso_score": -1.5354,
+        "hour": 22,
+        "month": 4,
+        "lag_1h": 121.5,
+        "rolling_mean_24h": 111.97
+    },
+    {
+        "timestamp": "2017-04-20 01:00:00",
+        "pm10": 112.0,
+        "iso_score": -0.1464,
+        "hour": 1,
+        "month": 4,
+        "lag_1h": 111.25,
+        "rolling_mean_24h": 114.67
+    },
+    {
+        "timestamp": "2017-04-20 07:00:00",
+        "pm10": 114.0,
+        "iso_score": -0.375,
+        "hour": 7,
+        "month": 4,
+        "lag_1h": 113.5,
+        "rolling_mean_24h": 115.5
+    },
+    {
+        "timestamp": "2017-04-21 19:00:00",
+        "pm10": 75.25,
+        "iso_score": -0.6997,
+        "hour": 19,
+        "month": 4,
+        "lag_1h": 166.5,
+        "rolling_mean_24h": 90.74
+    },
+    {
+        "timestamp": "2017-04-21 20:00:00",
+        "pm10": 60.25,
+        "iso_score": -1.0947,
+        "hour": 20,
+        "month": 4,
+        "lag_1h": 75.25,
+        "rolling_mean_24h": 90.43
+    },
+    {
+        "timestamp": "2017-04-21 21:00:00",
+        "pm10": 52.25,
+        "iso_score": -1.5859,
+        "hour": 21,
+        "month": 4,
+        "lag_1h": 60.25,
+        "rolling_mean_24h": 89.23
+    },
+    {
+        "timestamp": "2017-04-22 20:00:00",
+        "pm10": 168.75,
+        "iso_score": -0.4192,
+        "hour": 20,
+        "month": 4,
+        "lag_1h": 158.75,
+        "rolling_mean_24h": 79.12
+    },
+    {
+        "timestamp": "2017-04-22 21:00:00",
+        "pm10": 103.5,
+        "iso_score": -0.4408,
+        "hour": 21,
+        "month": 4,
+        "lag_1h": 168.75,
+        "rolling_mean_24h": 83.65
+    },
+    {
+        "timestamp": "2017-04-22 22:00:00",
+        "pm10": 56.0,
+        "iso_score": -0.4053,
+        "hour": 22,
+        "month": 4,
+        "lag_1h": 103.5,
+        "rolling_mean_24h": 85.78
+    },
+    {
+        "timestamp": "2017-04-22 23:00:00",
+        "pm10": 96.5,
+        "iso_score": -1.6513,
+        "hour": 23,
+        "month": 4,
+        "lag_1h": 56.0,
+        "rolling_mean_24h": 85.03
+    },
+    {
+        "timestamp": "2017-04-23 20:00:00",
+        "pm10": 138.0,
+        "iso_score": -0.2305,
+        "hour": 20,
+        "month": 4,
+        "lag_1h": 140.0,
+        "rolling_mean_24h": 95.2
+    },
+    {
+        "timestamp": "2017-04-23 22:00:00",
+        "pm10": 112.25,
+        "iso_score": -0.0299,
+        "hour": 22,
+        "month": 4,
+        "lag_1h": 147.5,
+        "rolling_mean_24h": 95.75
+    },
+    {
+        "timestamp": "2017-04-24 23:00:00",
+        "pm10": 188.75,
+        "iso_score": -0.7132,
+        "hour": 23,
+        "month": 4,
+        "lag_1h": 182.5,
+        "rolling_mean_24h": 114.51
+    },
+    {
+        "timestamp": "2017-04-25 00:00:00",
+        "pm10": 134.25,
+        "iso_score": -1.1624,
+        "hour": 0,
+        "month": 4,
+        "lag_1h": 188.75,
+        "rolling_mean_24h": 117.72
+    },
+    {
+        "timestamp": "2017-04-25 01:00:00",
+        "pm10": 138.75,
+        "iso_score": -0.9149,
+        "hour": 1,
+        "month": 4,
+        "lag_1h": 134.25,
+        "rolling_mean_24h": 118.35
+    },
+    {
+        "timestamp": "2017-04-25 02:00:00",
+        "pm10": 122.75,
+        "iso_score": -0.8869,
+        "hour": 2,
+        "month": 4,
+        "lag_1h": 138.75,
+        "rolling_mean_24h": 120.44
+    },
+    {
+        "timestamp": "2017-04-25 04:00:00",
+        "pm10": 27.75,
+        "iso_score": -0.509,
+        "hour": 4,
+        "month": 4,
+        "lag_1h": 119.25,
+        "rolling_mean_24h": 123.1
+    },
+    {
+        "timestamp": "2017-04-25 05:00:00",
+        "pm10": 87.0,
+        "iso_score": -1.6403,
+        "hour": 5,
+        "month": 4,
+        "lag_1h": 27.75,
+        "rolling_mean_24h": 119.76
+    },
+    {
+        "timestamp": "2017-04-25 06:00:00",
+        "pm10": 142.0,
+        "iso_score": -0.9536,
+        "hour": 6,
+        "month": 4,
+        "lag_1h": 87.0,
+        "rolling_mean_24h": 119.27
+    },
+    {
+        "timestamp": "2017-04-25 07:00:00",
+        "pm10": 123.25,
+        "iso_score": -1.7745,
+        "hour": 7,
+        "month": 4,
+        "lag_1h": 142.0,
+        "rolling_mean_24h": 121.84
+    },
+    {
+        "timestamp": "2017-04-25 09:00:00",
+        "pm10": 99.0,
+        "iso_score": -0.4207,
+        "hour": 9,
+        "month": 4,
+        "lag_1h": 70.5,
+        "rolling_mean_24h": 121.15
+    },
+    {
+        "timestamp": "2017-04-25 10:00:00",
+        "pm10": 99.5,
+        "iso_score": -0.3125,
+        "hour": 10,
+        "month": 4,
+        "lag_1h": 99.0,
+        "rolling_mean_24h": 120.61
+    },
+    {
+        "timestamp": "2017-04-25 11:00:00",
+        "pm10": 105.0,
+        "iso_score": -0.2775,
+        "hour": 11,
+        "month": 4,
+        "lag_1h": 99.5,
+        "rolling_mean_24h": 120.02
+    },
+    {
+        "timestamp": "2017-04-25 22:00:00",
+        "pm10": 74.75,
+        "iso_score": -0.3283,
+        "hour": 22,
+        "month": 4,
+        "lag_1h": 93.75,
+        "rolling_mean_24h": 111.68
+    },
+    {
+        "timestamp": "2017-04-25 23:00:00",
+        "pm10": 65.25,
+        "iso_score": -0.3986,
+        "hour": 23,
+        "month": 4,
+        "lag_1h": 74.75,
+        "rolling_mean_24h": 107.19
+    },
+    {
+        "timestamp": "2017-04-26 23:00:00",
+        "pm10": 136.25,
+        "iso_score": -0.0416,
+        "hour": 23,
+        "month": 4,
+        "lag_1h": 73.0,
+        "rolling_mean_24h": 73.97
+    },
+    {
+        "timestamp": "2017-04-27 00:00:00",
+        "pm10": 137.0,
+        "iso_score": -0.3109,
+        "hour": 0,
+        "month": 4,
+        "lag_1h": 136.25,
+        "rolling_mean_24h": 76.93
+    },
+    {
+        "timestamp": "2017-04-27 01:00:00",
+        "pm10": 102.75,
+        "iso_score": -0.2517,
+        "hour": 1,
+        "month": 4,
+        "lag_1h": 137.0,
+        "rolling_mean_24h": 80.57
+    },
+    {
+        "timestamp": "2017-04-28 20:00:00",
+        "pm10": 63.5,
+        "iso_score": -0.0255,
+        "hour": 20,
+        "month": 4,
+        "lag_1h": 142.0,
+        "rolling_mean_24h": 103.04
+    },
+    {
+        "timestamp": "2017-04-28 21:00:00",
+        "pm10": 69.75,
+        "iso_score": -0.747,
+        "hour": 21,
+        "month": 4,
+        "lag_1h": 63.5,
+        "rolling_mean_24h": 101.68
+    },
+    {
+        "timestamp": "2017-04-28 22:00:00",
+        "pm10": 137.25,
+        "iso_score": -0.6339,
+        "hour": 22,
+        "month": 4,
+        "lag_1h": 69.75,
+        "rolling_mean_24h": 99.72
+    },
+    {
+        "timestamp": "2017-04-28 23:00:00",
+        "pm10": 126.25,
+        "iso_score": -0.4222,
+        "hour": 23,
+        "month": 4,
+        "lag_1h": 137.25,
+        "rolling_mean_24h": 101.91
+    },
+    {
+        "timestamp": "2017-04-29 00:00:00",
+        "pm10": 113.5,
+        "iso_score": -0.3372,
+        "hour": 0,
+        "month": 4,
+        "lag_1h": 126.25,
+        "rolling_mean_24h": 103.54
+    }
+]

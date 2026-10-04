@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="history-page">
+    <div class="page-title-bar glass-card">
+        <div>
+            <h2><i class="fa-solid fa-clock-rotate-left"></i> Prediction History & SQLite Database Audit</h2>
+            <p>Persistent SQLite Recorded Logs of PM10 Forecasts, Changes & Classification Results</p>
+        </div>
+        <div class="header-export-actions">
+            <a href="/api/export/predictions" class="btn btn-outline">
+                <i class="fa-solid fa-download"></i> Export Predictions CSV
+            </a>
+        </div>
+    </div>
+
+    <!-- History Table Card -->
+    <div class="glass-card mt-4">
+        <div class="card-header">
+            <h3><i class="fa-solid fa-table"></i> Logged Predictions</h3>
+            <span id="history-count" class="badge blue">0 Entries</span>
+        </div>
+        <div class="table-responsive">
+            <table class="custom-table" id="table-history">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Timestamp</th>
+                        <th>Current PM10</th>
+                        <th>Predicted PM10</th>
+                        <th>Expected Change</th>
+                        <th>Change %</th>
+                        <th>Category</th>
+                        <th>Anomaly Status</th>
+                        <th>Model Version</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody-history">
+                    <!-- Injected via JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/history.js') }}"></script>
+{% endblock %}

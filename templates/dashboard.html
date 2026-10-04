@@ -1,0 +1,172 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="dashboard-page">
+    <!-- Top Hero Banner -->
+    <div class="hero-banner glass-card">
+        <div class="hero-text">
+            <h2>Tirupati PM10 Air Quality Intelligence Dashboard</h2>
+            <p>Real-time PM10 Monitoring & Machine Learning Next-Hour Forecasting System for Tirupati</p>
+        </div>
+        <div class="hero-actions" style="display:flex; align-items:center; gap:0.75rem;">
+            <span class="badge blue" style="font-size:0.9rem; padding:0.5rem 0.8rem;"><i class="fa-solid fa-location-dot"></i> Location: Tirupati, AP (AP001)</span>
+            <button id="btn-refresh-dashboard" class="btn btn-primary" onclick="refreshDashboardData()">
+                <i class="fa-solid fa-arrows-rotate"></i> Refresh Live Data
+            </button>
+        </div>
+    </div>
+
+    <!-- Key Metrics Cards Row -->
+    <div class="metrics-grid">
+        <!-- Card 1: Current Measured PM10 -->
+        <div class="metric-card glass-card">
+            <div class="card-header-sm">
+                <span class="card-title">CURRENT PM10</span>
+                <i class="fa-solid fa-wind icon-subtle"></i>
+            </div>
+            <div class="metric-body">
+                <div class="metric-value-group">
+                    <span id="card-current-pm10" class="metric-number">--</span>
+                    <span class="metric-unit">µg/m³</span>
+                </div>
+                <div class="metric-badge-wrapper">
+                    <span id="card-category-badge" class="category-badge">Loading...</span>
+                </div>
+            </div>
+            <div class="metric-footer">
+                <span id="card-freshness" class="text-muted"><i class="fa-regular fa-clock"></i> Updating...</span>
+            </div>
+        </div>
+
+        <!-- Card 2: Next-Hour Predicted PM10 -->
+        <div class="metric-card glass-card">
+            <div class="card-header-sm">
+                <span class="card-title">PREDICTED NEXT-HOUR</span>
+                <i class="fa-solid fa-wand-magic-sparkles icon-subtle"></i>
+            </div>
+            <div class="metric-body">
+                <div class="metric-value-group">
+                    <span id="card-predicted-pm10" class="metric-number text-accent">--</span>
+                    <span class="metric-unit">µg/m³</span>
+                </div>
+                <div class="metric-badge-wrapper">
+                    <span id="card-predicted-category" class="category-badge">Classifying...</span>
+                </div>
+            </div>
+            <div class="metric-footer">
+                <span id="card-model-name" class="text-muted"><i class="fa-solid fa-robot"></i> XGBoost Regressor</span>
+            </div>
+        </div>
+
+        <!-- Card 3: Expected PM10 Change -->
+        <div class="metric-card glass-card">
+            <div class="card-header-sm">
+                <span class="card-title">EXPECTED CHANGE</span>
+                <i class="fa-solid fa-chart-line-up icon-subtle"></i>
+            </div>
+            <div class="metric-body">
+                <div class="metric-value-group">
+                    <span id="card-change-val" class="metric-number">--</span>
+                    <span id="card-change-pct" class="metric-unit">--</span>
+                </div>
+                <div id="card-change-arrow" class="change-indicator">
+                    <!-- Dynamic Arrow -->
+                </div>
+            </div>
+            <div class="metric-footer">
+                <span class="text-muted"><i class="fa-solid fa-arrow-right-arrow-left"></i> Measured vs Predicted</span>
+            </div>
+        </div>
+
+        <!-- Card 4: Anomaly Status -->
+        <div class="metric-card glass-card">
+            <div class="card-header-sm">
+                <span class="card-title">ANOMALY STATUS</span>
+                <i class="fa-solid fa-shield-cat icon-subtle"></i>
+            </div>
+            <div class="metric-body">
+                <div class="anomaly-status-wrapper">
+                    <span id="card-anomaly-badge" class="anomaly-badge normal"><i class="fa-solid fa-check"></i> NORMAL</span>
+                </div>
+                <div class="score-row">
+                    <span class="score-label">Isolation Score:</span>
+                    <span id="card-anomaly-score" class="score-val">--</span>
+                </div>
+            </div>
+            <div class="metric-footer">
+                <span class="text-muted"><i class="fa-solid fa-tree"></i> Isolation Forest Algorithm</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Current vs Predicted Visual Comparison Banner -->
+    <div class="comparison-banner glass-card">
+        <div class="comp-box">
+            <div class="comp-label">CURRENT MEASURED PM10</div>
+            <div id="comp-current" class="comp-value">-- µg/m³</div>
+            <div class="comp-tag">Actual Sensor Measurement</div>
+        </div>
+        
+        <div class="comp-arrow-wrapper">
+            <div id="comp-arrow-icon" class="arrow-circle">
+                <i class="fa-solid fa-right-long"></i>
+            </div>
+            <div id="comp-change-text" class="change-tag">Expected Change: --</div>
+        </div>
+
+        <div class="comp-box">
+            <div class="comp-label">NEXT-HOUR PREDICTED PM10</div>
+            <div id="comp-predicted" class="comp-value text-accent">-- µg/m³</div>
+            <div class="comp-tag">ML Forecast Model Estimate</div>
+        </div>
+    </div>
+
+    <!-- Charts Row: Trend Chart & Station Overview -->
+    <div class="grid-2-col">
+        <!-- 24-Hour PM10 Trend Chart -->
+        <div class="chart-card glass-card">
+            <div class="card-header">
+                <h3><i class="fa-solid fa-chart-area"></i> 24-Hour PM10 Trend & Forecast</h3>
+                <div class="chart-legend-custom">
+                    <span class="legend-item"><span class="legend-dot actual"></span> Measured PM10</span>
+                    <span class="legend-item"><span class="legend-dot predicted"></span> Next-Hour Prediction</span>
+                </div>
+            </div>
+            <div class="chart-wrapper">
+                <canvas id="dashboardTrendChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Station Info & Explainable AI Drivers -->
+        <div class="info-card glass-card">
+            <div class="card-header">
+                <h3><i class="fa-solid fa-location-dot"></i> Station & Prediction Drivers (XAI)</h3>
+            </div>
+            
+            <div class="station-meta-block">
+                <div class="meta-item">
+                    <span class="lbl">Monitoring Station:</span>
+                    <span id="meta-station-name" class="val">AP001 - Tirupati (Alipiri Foothills / SVU)</span>
+                </div>
+                <div class="meta-item">
+                    <span class="lbl">Coordinates:</span>
+                    <span id="meta-coords" class="val">13.6288° N, 79.4192° E (Tirupati)</span>
+                </div>
+                <div class="meta-item">
+                    <span class="lbl">Data Stream Status:</span>
+                    <span id="meta-api-status" class="val-badge green">ONLINE</span>
+                </div>
+            </div>
+
+            <h4 class="xai-title"><i class="fa-solid fa-lightbulb"></i> Top Prediction Drivers</h4>
+            <div id="xai-drivers-list" class="xai-list">
+                <!-- Dynamic XAI drivers injected here -->
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+{% endblock %}

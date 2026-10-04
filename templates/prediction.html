@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="prediction-page">
+    <div class="page-title-bar glass-card">
+        <div>
+            <h2><i class="fa-solid fa-wand-magic-sparkles"></i> PM10 Next-Hour ML Forecasting for Tirupati</h2>
+            <p>Chronological Time-Series Machine Learning Forecasting for Tirupati (AP001 Station Dataset)</p>
+        </div>
+        <div class="mode-selector-pill">
+            <button id="btn-mode-live" class="pill-btn active" onclick="switchPredMode('LIVE')">
+                <i class="fa-solid fa-bolt"></i> Live Forecast
+            </button>
+            <button id="btn-mode-sim" class="pill-btn" onclick="switchPredMode('SIMULATED')">
+                <i class="fa-solid fa-sliders"></i> Scenario Simulation
+            </button>
+        </div>
+    </div>
+
+    <!-- Live Forecast / Interactive Simulation Form Grid -->
+    <div class="grid-2-col">
+        <!-- Interactive Controls / Feature Inputs -->
+        <div class="glass-card">
+            <div class="card-header">
+                <h3><i class="fa-solid fa-sliders"></i> Predictor Model Features (Tirupati Dataset)</h3>
+                <span id="mode-badge" class="badge blue">LIVE FORECAST MODE</span>
+            </div>
+            
+            <form id="pred-form" onsubmit="event.preventDefault(); runPrediction();">
+                <div class="form-group">
+                    <label class="form-label"><i class="fa-solid fa-location-dot text-accent"></i> Target Location / Station:</label>
+                    <input type="text" class="form-input" value="Tirupati (Alipiri Foothills / SVU - AP001)" readonly style="background: rgba(255,255,255,0.05); cursor: not-allowed; font-weight: 700; color: var(--accent-blue);">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Current / Base PM10 Value (µg/m³):</label>
+                    <input type="number" id="input-current-pm10" class="form-input" value="72.0" step="0.1" min="0" required>
+                </div>
+
+                <div class="form-grid-2">
+                    <div class="form-group">
+                        <label class="form-label">PM10 Lag 1h (µg/m³):</label>
+                        <input type="number" id="input-lag-1h" class="form-input" value="70.0" step="0.1" min="0">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">PM10 Lag 2h (µg/m³):</label>
+                        <input type="number" id="input-lag-2h" class="form-input" value="68.0" step="0.1" min="0">
+                    </div>
+                </div>
+
+                <div class="form-grid-2">
+                    <div class="form-group">
+                        <label class="form-label">PM10 Lag 3h (µg/m³):</label>
+                        <input type="number" id="input-lag-3h" class="form-input" value="65.0" step="0.1" min="0">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">PM10 Lag 24h (µg/m³):</label>
+                        <input type="number" id="input-lag-24h" class="form-input" value="75.0" step="0.1" min="0">
+                    </div>
+                </div>
+
+                <div class="form-grid-2">
+                    <div class="form-group">
+                        <label class="form-label">Simulation Date & Time:</label>
+                        <input type="datetime-local" id="input-datetime" class="form-input">
+                    </div>
+                    <div class="form-group" style="display: flex; align-items: flex-end;">
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fa-solid fa-play"></i> Run Prediction Model
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Prediction Outcome Display Box -->
+        <div class="glass-card flex-column justify-between">
+            <div class="card-header">
+                <h3><i class="fa-solid fa-bullseye"></i> Next-Hour Predicted Outcome</h3>
+                <span class="badge purple">XGBoost Regressor</span>
+            </div>
+
+            <div class="prediction-hero-box">
+                <div class="pred-label">FORECASTED PM10 CONCENTRATION</div>
+                <div class="pred-value-row">
+                    <span id="res-predicted-pm10" class="pred-num text-accent">--</span>
+                    <span class="unit">µg/m³</span>
+                </div>
+                <div class="category-display mt-2">
+                    <span id="res-category-badge" class="category-badge lg">Category</span>
+                </div>
+            </div>
+
+            <div class="pred-summary-grid">
+                <div class="sum-box">
+                    <span class="sum-title">Base PM10</span>
+                    <span id="res-current-pm10" class="sum-val">-- µg/m³</span>
+                </div>
+                <div class="sum-box">
+                    <span class="sum-title">Expected Change</span>
+                    <span id="res-expected-change" class="sum-val">--</span>
+                </div>
+                <div class="sum-box">
+                    <span class="sum-title">Anomaly Status</span>
+                    <span id="res-anomaly-status" class="sum-val">--</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Explainable AI (XAI) Feature Importance Chart -->
+    <div class="glass-card mt-4">
+        <div class="card-header">
+            <h3><i class="fa-solid fa-brain"></i> Explainable AI (XAI) – Why This Prediction?</h3>
+            <span class="text-muted"><i class="fa-solid fa-circle-info"></i> Identifies top influential features driving the ML model decision</span>
+        </div>
+        <div class="grid-2-col align-center">
+            <div class="chart-wrapper" style="height: 280px;">
+                <canvas id="xaiBarChart"></canvas>
+            </div>
+            <div id="xai-explanation-text" class="xai-text-box">
+                <!-- Injected XAI Breakdown -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Backtesting Actual vs Predicted Evaluation -->
+    <div class="glass-card mt-4">
+        <div class="card-header">
+            <h3><i class="fa-solid fa-chart-area"></i> Historical Model Backtest (Unseen Test Set Evaluation)</h3>
+            <span class="text-muted">Chronological Split: Predicted vs Actual PM10</span>
+        </div>
+        <div class="chart-wrapper" style="height: 320px;">
+            <canvas id="backtestChart"></canvas>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/prediction.js') }}"></script>
+{% endblock %}

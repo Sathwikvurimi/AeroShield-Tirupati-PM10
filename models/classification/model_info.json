@@ -1,0 +1,98 @@
+{
+    "best_model_name": "XGBoost Classifier",
+    "primary_metric": "Macro F1",
+    "best_macro_f1": 46.24,
+    "comparison": [
+        {
+            "model": "XGBoost Classifier",
+            "accuracy": 81.06,
+            "precision": 48.12,
+            "recall": 45.01,
+            "f1_score": 46.24,
+            "macro_f1": 46.24,
+            "balanced_accuracy": 45.01,
+            "rank": 1
+        },
+        {
+            "model": "Decision Tree Classifier",
+            "accuracy": 79.64,
+            "precision": 38.84,
+            "recall": 37.39,
+            "f1_score": 38.02,
+            "macro_f1": 38.02,
+            "balanced_accuracy": 44.87,
+            "rank": 2
+        },
+        {
+            "model": "Logistic Regression",
+            "accuracy": 79.8,
+            "precision": 39.59,
+            "recall": 36.35,
+            "f1_score": 37.51,
+            "macro_f1": 37.51,
+            "balanced_accuracy": 43.62,
+            "rank": 3
+        }
+    ],
+    "classes": [
+        "Good",
+        "Satisfactory",
+        "Moderate",
+        "Poor",
+        "Very Poor",
+        "Severe"
+    ],
+    "confusion_matrix": [
+        [
+            3629,
+            5,
+            0,
+            709,
+            0,
+            0
+        ],
+        [
+            8,
+            724,
+            0,
+            550,
+            0,
+            0
+        ],
+        [
+            0,
+            1,
+            0,
+            1,
+            0,
+            0
+        ],
+        [
+            568,
+            219,
+            0,
+            4473,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+        ]
+    ],
+    "trained_date": "2026-10-04 03:39:08",
+    "train_samples": 43548,
+    "test_samples": 10888
+}
