@@ -1,4 +1,4 @@
-# Ignore local virtual environments & dependencies
+# Ignore local virtual environments & heavy build caches
 venv/
 .venv/
 node_modules/
@@ -13,4 +13,3 @@ tests/
 *.log
 *.pyc
 __pycache__/
-frontend/src/
