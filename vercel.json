@@ -1,26 +1,10 @@
 {
   "version": 2,
   "buildCommand": "cd frontend && npm install && npm run build",
-  "builds": [
+  "rewrites": [
     {
-      "src": "app.py",
-      "use": "@vercel/python",
-      "config": {
-        "includeFiles": [
-          "models/**",
-          "database/**",
-          "data/**",
-          "preprocessing/**",
-          "services/**",
-          "frontend/dist/**"
-        ]
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "app.py"
+      "source": "/(.*)",
+      "destination": "/api/index.py"
     }
   ]
 }
