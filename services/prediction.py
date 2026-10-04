@@ -18,34 +18,56 @@ CLASSIFICATION_MODEL_PATH = os.path.abspath(os.path.join(os.path.dirname(__file_
 LABEL_ENCODER_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '../models/classification/label_encoder.pkl'))
 REG_INFO_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '../models/regression/model_info.json'))
 
+RIDGE_WEIGHTS_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '../models/regression/ridge_weights.json'))
+
 _REG_MODEL = None
 _SCALER = None
 _CLS_MODEL = None
 _LABEL_ENCODER = None
 _REG_INFO = None
+_RIDGE_WEIGHTS = None
 
 def load_ml_models():
-    global _REG_MODEL, _SCALER, _CLS_MODEL, _LABEL_ENCODER, _REG_INFO
-    if os.path.exists(REGRESSION_MODEL_PATH):
-        _REG_MODEL = joblib.load(REGRESSION_MODEL_PATH)
-    if os.path.exists(SCALER_PATH):
-        _SCALER = joblib.load(SCALER_PATH)
-    if os.path.exists(CLASSIFICATION_MODEL_PATH):
-        _CLS_MODEL = joblib.load(CLASSIFICATION_MODEL_PATH)
-    if os.path.exists(LABEL_ENCODER_PATH):
-        _LABEL_ENCODER = joblib.load(LABEL_ENCODER_PATH)
+    global _REG_MODEL, _SCALER, _CLS_MODEL, _LABEL_ENCODER, _REG_INFO, _RIDGE_WEIGHTS
+    if joblib is not None and os.path.exists(REGRESSION_MODEL_PATH):
+        try:
+            _REG_MODEL = joblib.load(REGRESSION_MODEL_PATH)
+        except Exception:
+            _REG_MODEL = None
+    if joblib is not None and os.path.exists(SCALER_PATH):
+        try:
+            _SCALER = joblib.load(SCALER_PATH)
+        except Exception:
+            _SCALER = None
+    if joblib is not None and os.path.exists(CLASSIFICATION_MODEL_PATH):
+        try:
+            _CLS_MODEL = joblib.load(CLASSIFICATION_MODEL_PATH)
+        except Exception:
+            _CLS_MODEL = None
+    if joblib is not None and os.path.exists(LABEL_ENCODER_PATH):
+        try:
+            _LABEL_ENCODER = joblib.load(LABEL_ENCODER_PATH)
+        except Exception:
+            _LABEL_ENCODER = None
     if os.path.exists(REG_INFO_PATH):
-        with open(REG_INFO_PATH, 'r') as f:
-            _REG_INFO = json.load(f)
+        try:
+            with open(REG_INFO_PATH, 'r') as f:
+                _REG_INFO = json.load(f)
+        except Exception:
+            _REG_INFO = None
+    if os.path.exists(RIDGE_WEIGHTS_PATH):
+        try:
+            with open(RIDGE_WEIGHTS_PATH, 'r') as f:
+                _RIDGE_WEIGHTS = json.load(f)
+        except Exception:
+            _RIDGE_WEIGHTS = None
 
 load_ml_models()
 
 def predict_next_hour_pm10(current_pm10, recent_pm10_lags=None, input_datetime=None, pred_type="LIVE", station_id="AP001", forecast_hours=1):
-    global _REG_MODEL, _SCALER, _CLS_MODEL, _LABEL_ENCODER, _REG_INFO
-    if _REG_MODEL is None or _SCALER is None:
+    global _REG_MODEL, _SCALER, _CLS_MODEL, _LABEL_ENCODER, _REG_INFO, _RIDGE_WEIGHTS
+    if _REG_MODEL is None and _RIDGE_WEIGHTS is None:
         load_ml_models()
-        if _REG_MODEL is None:
-            raise RuntimeError("Regression model is not trained yet. Please run training scripts.")
 
     forecast_hours = max(1, min(24, int(forecast_hours)))
 
@@ -126,14 +148,28 @@ def predict_next_hour_pm10(current_pm10, recent_pm10_lags=None, input_datetime=N
             'rolling_mean_24h': rolling_mean_24h, 'rolling_std_24h': rolling_std_24h
         }
         
-        X_vec = pd.DataFrame([feature_dict])[FEATURE_COLUMNS]
-        
-        if model_name in ["Linear Regression", "Ridge Regression"]:
-            X_scaled = _SCALER.transform(X_vec)
-            step_pred = float(_REG_MODEL.predict(X_scaled)[0])
+        if _REG_MODEL is not None:
+            try:
+                X_vec = pd.DataFrame([feature_dict])[FEATURE_COLUMNS]
+                if model_name in ["Linear Regression", "Ridge Regression"] and _SCALER is not None:
+                    X_scaled = _SCALER.transform(X_vec)
+                    step_pred = float(_REG_MODEL.predict(X_scaled)[0])
+                else:
+                    step_pred = float(_REG_MODEL.predict(X_vec)[0])
+            except Exception:
+                step_pred = None
         else:
-            step_pred = float(_REG_MODEL.predict(X_vec)[0])
-            
+            step_pred = None
+
+        if step_pred is None:
+            if _RIDGE_WEIGHTS is not None:
+                intercept = _RIDGE_WEIGHTS.get('intercept', 0.0)
+                coefs = _RIDGE_WEIGHTS.get('coefficients', {})
+                pred_val = intercept + sum(float(feature_dict.get(k, 0.0)) * float(v) for k, v in coefs.items())
+                step_pred = float(pred_val)
+            else:
+                step_pred = float(0.6 * curr_lag_1h + 0.25 * curr_lag_2h + 0.15 * curr_lag_3h)
+
         step_pred = max(0.0, round(step_pred, 2))
         step_cat, step_color = get_pm10_category(step_pred)
         
