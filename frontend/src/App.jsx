@@ -52,7 +52,7 @@ export default function App() {
 
   useEffect(() => {
     loadData(false);
-    const timer = setInterval(() => loadData(false), 5000);
+    const timer = setInterval(() => loadData(false), 1000);
     return () => clearInterval(timer);
   }, []);
 

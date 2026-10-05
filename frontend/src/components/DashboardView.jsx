@@ -40,6 +40,16 @@ ChartJS.register(
 
 export default function DashboardView({ liveData, predData, histData }) {
   const [weather, setWeather] = useState(null);
+  const [liveClock, setLiveClock] = useState(() => 
+    new Date().toLocaleTimeString('en-IN', { timeZone: 'Asia/Kolkata', hour12: false })
+  );
+
+  useEffect(() => {
+    const clockTimer = setInterval(() => {
+      setLiveClock(new Date().toLocaleTimeString('en-IN', { timeZone: 'Asia/Kolkata', hour12: false }));
+    }, 1000);
+    return () => clearInterval(clockTimer);
+  }, []);
 
   useEffect(() => {
     fetch('/api/weather')
