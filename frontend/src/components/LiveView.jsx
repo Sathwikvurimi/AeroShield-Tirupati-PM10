@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { formatISTFull } from '../utils/time';
 import { Radio, MapPin, Gauge, Database, Clock, RefreshCw } from 'lucide-react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -88,7 +89,7 @@ export default function LiveView({ liveData, onRefresh, refreshing }) {
               </tr>
               <tr>
                 <td><strong>Timestamp</strong></td>
-                <td>{liveData?.timestamp || '--'}</td>
+                <td>{formatISTFull(liveData?.timestamp)} IST</td>
               </tr>
               <tr>
                 <td><strong>Telemetry Source</strong></td>

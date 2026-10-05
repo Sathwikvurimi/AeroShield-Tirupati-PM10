@@ -68,19 +68,20 @@ DIST_FOLDER = os.path.abspath(
     os.path.join(os.path.dirname(__file__), 'frontend/dist')
 )
 
-if os.path.exists(DIST_FOLDER):
-
-    app.static_folder = os.path.join(DIST_FOLDER, 'assets')
-    app.static_url_path = '/assets'
-
-    @app.after_request
-    def add_header(response):
+@app.after_request
+def add_header(response):
+    if request.path.startswith('/api'):
         response.headers['Cache-Control'] = (
             'no-cache, no-store, must-revalidate, max-age=0'
         )
         response.headers['Pragma'] = 'no-cache'
         response.headers['Expires'] = '0'
-        return response
+    return response
+
+if os.path.exists(DIST_FOLDER):
+
+    app.static_folder = os.path.join(DIST_FOLDER, 'assets')
+    app.static_url_path = '/assets'
 
     @app.route('/')
     def index():

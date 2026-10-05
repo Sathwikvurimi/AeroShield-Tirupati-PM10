@@ -5,11 +5,11 @@
     <div class="page-title-bar glass-card">
         <div>
             <h2><i class="fa-solid fa-location-dot"></i> Tirupati Live PM10 Monitoring Station</h2>
-            <p>Real-Time CPCB PM10 Telemetry Stream & GIS Mapping for Tirupati, Andhra Pradesh</p>
+            <p>Real-Time CPCB PM10 Telemetry Stream &amp; GIS Mapping for Tirupati, Andhra Pradesh</p>
         </div>
         <div class="live-controls">
-            <span class="badge blue" style="font-size:0.9rem; padding:0.5rem 0.8rem;"><i class="fa-solid fa-building-flag"></i> Tirupati Station (AP001)</span>
-            <button id="btn-manual-refresh-live" class="btn btn-primary btn-sm" onclick="loadLivePageData(true)">
+            <span class="badge blue badge-lg-padded"><i class="fa-solid fa-building-flag"></i> Tirupati Station (AP001)</span>
+            <button type="button" id="btn-manual-refresh-live" class="btn btn-primary btn-sm" onclick="loadLivePageData(true)">
                 <i class="fa-solid fa-rotate-right"></i> Refresh Live Data
             </button>
         </div>
@@ -23,7 +23,7 @@
                 <h3><i class="fa-solid fa-gauge-high"></i> Selected Station Telemetry</h3>
                 <span id="live-api-badge" class="badge green">API ONLINE</span>
             </div>
-            
+
             <div class="live-display-box">
                 <div class="gauge-center">
                     <span id="live-pm10-value" class="big-pm10">--</span>
@@ -62,7 +62,7 @@
                 <h3><i class="fa-solid fa-map-location-dot"></i> Tirupati PM10 GIS Location Map</h3>
                 <span id="map-station-count" class="badge blue">Tirupati Station Active</span>
             </div>
-            <div id="map-container" style="height: 340px; border-radius: 12px; width: 100%;"></div>
+            <div id="map-container"></div>
         </div>
     </div>
 
@@ -98,14 +98,14 @@
         <div class="card-header">
             <h3><i class="fa-solid fa-chart-line"></i> Station PM10 Historical Observations</h3>
             <div class="time-range-buttons">
-                <button class="range-btn active" onclick="setChartRange('1h', this)">1 Hour</button>
-                <button class="range-btn" onclick="setChartRange('6h', this)">6 Hours</button>
-                <button class="range-btn" onclick="setChartRange('12h', this)">12 Hours</button>
-                <button class="range-btn" onclick="setChartRange('24h', this)">24 Hours</button>
-                <button class="range-btn" onclick="setChartRange('7d', this)">7 Days</button>
+                <button type="button" class="range-btn active" onclick="setChartRange('1h', this)">1 Hour</button>
+                <button type="button" class="range-btn" onclick="setChartRange('6h', this)">6 Hours</button>
+                <button type="button" class="range-btn" onclick="setChartRange('12h', this)">12 Hours</button>
+                <button type="button" class="range-btn" onclick="setChartRange('24h', this)">24 Hours</button>
+                <button type="button" class="range-btn" onclick="setChartRange('7d', this)">7 Days</button>
             </div>
         </div>
-        <div class="chart-wrapper" style="height: 340px;">
+        <div class="chart-wrapper">
             <canvas id="liveStreamChart"></canvas>
         </div>
     </div>

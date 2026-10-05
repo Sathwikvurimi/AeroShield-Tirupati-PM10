@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { formatISTTime } from '../utils/time';
 import { 
   CloudSun, 
   Wind, 
@@ -133,7 +134,7 @@ export default function DashboardView({ liveData, predData, histData }) {
             <div className="aqi-header-row">
               <span className="aqi-station-title">Live PM10 in Tirupati Urban</span>
               <span className="aqi-updated-time">
-                <span className="pulse-dot"></span> Updated {liveData?.timestamp?.split(' ')[1] || '14:30'} local time
+                <span className="pulse-dot"></span> Updated {formatISTTime(liveData?.timestamp)} IST
               </span>
             </div>
 

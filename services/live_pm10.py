@@ -2,7 +2,7 @@ import requests
 import os
 import time
 import math
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 import pandas as pd
 import sys
 
@@ -10,7 +10,11 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from preprocessing.preprocess import get_pm10_category
 from database.db import log_live_reading, get_latest_live_reading
 
-# Tirupati Air Quality Monitoring Station (AP001 Target Dataset Location)
+IST = timezone(timedelta(hours=5, minutes=30))
+
+def get_ist_now():
+    return datetime.now(IST)
+
 INDIA_STATIONS = [
     {"station_id": "AP001", "station_name": "AP001 - Tirupati (Alipiri Foothills / SVU)", "city": "Tirupati", "state": "Andhra Pradesh", "latitude": 13.6288, "longitude": 79.4192, "baseline_pm10": 42.0}
 ]
@@ -22,7 +26,7 @@ _ALL_INDIA_CACHE = {
     "last_fetched_time": 0
 }
 
-CACHE_TTL_SECONDS = 3  # 3-second short cache for continuous live telemetry updates
+CACHE_TTL_SECONDS = 1  # 1-second cache for instant live telemetry updates
 
 def get_all_india_stations(state_filter=None):
     if state_filter and state_filter.lower() != 'all':
@@ -35,17 +39,21 @@ def fetch_all_india_stations_pm10(state_filter=None, force_refresh=False):
     """
     global _ALL_INDIA_CACHE
     now_time = time.time()
-    
+
+    if force_refresh:
+        _ALL_INDIA_CACHE["last_fetched_time"] = 0
+
     if not force_refresh and _ALL_INDIA_CACHE["data"] is not None and (now_time - _ALL_INDIA_CACHE["last_fetched_time"]) < CACHE_TTL_SECONDS:
         cached_data = _ALL_INDIA_CACHE["data"]
         if state_filter and state_filter.lower() != 'all':
             return [s for s in cached_data if s["state"].lower() == state_filter.lower()]
         return cached_data
         
-    current_time_str = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    hour = datetime.now().hour
-    minute = datetime.now().minute
-    sec = datetime.now().second
+    now_ist = get_ist_now()
+    current_time_str = now_ist.strftime('%Y-%m-%d %H:%M:%S')
+    hour = now_ist.hour
+    minute = now_ist.minute
+    sec = now_ist.second
 
     # Continuous micro-fluctuation so value updates naturally every 5 seconds
     diurnal_factor = 1.0 + 0.18 * math.sin(2 * math.pi * (hour - 6) / 24.0)
@@ -111,8 +119,8 @@ def get_past_24h_pm10_readings(station_id="AP001"):
     Generates exact 24-hour historical PM10 telemetry relative to current live time (t-24h to t-0h).
     Dynamically recalculates on every request/refresh.
     """
-    from datetime import datetime, timedelta
-    now = datetime.now()
+    from datetime import timedelta
+    now = get_ist_now()
     readings = []
     
     st = INDIA_STATIONS[0]

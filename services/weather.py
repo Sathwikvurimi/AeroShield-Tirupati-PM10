@@ -1,6 +1,8 @@
 import requests
 import time
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
+
+IST = timezone(timedelta(hours=5, minutes=30))
 
 _WEATHER_CACHE = {
     "data": None,
@@ -19,6 +21,8 @@ def get_tirupati_weather(force_refresh=False):
     if not force_refresh and _WEATHER_CACHE["data"] is not None and (now_time - _WEATHER_CACHE["last_fetched"]) < CACHE_TTL_SECONDS:
         return _WEATHER_CACHE["data"]
 
+    now_ist = datetime.now(IST)
+
     # Baseline AccuWeather verified telemetry for Tirupati
     weather_data = {
         "city": "Tirupati",
@@ -36,7 +40,7 @@ def get_tirupati_weather(force_refresh=False):
         "uv_index": "6.0 (High)",
         "rain_chance": "15%",
         "provider": "Live Weather Stream (Tirupati)",
-        "timestamp": datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+        "timestamp": now_ist.strftime('%Y-%m-%d %H:%M:%S'),
         "api_status": "LIVE_VERIFIED"
     }
 
@@ -87,7 +91,7 @@ def get_tirupati_weather(force_refresh=False):
                 "wind_kmh": round(wind, 1),
                 "provider": "Live Weather Stream (Tirupati)",
                 "api_status": "LIVE_VERIFIED",
-                "timestamp": datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                "timestamp": now_ist.strftime('%Y-%m-%d %H:%M:%S')
             })
     except Exception as e:
         print(f"Weather live stream warning: {e}")

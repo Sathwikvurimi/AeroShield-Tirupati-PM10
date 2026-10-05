@@ -31,15 +31,16 @@ export default function App() {
   const loadData = async (force = false) => {
     if (force) setRefreshing(true);
     try {
-      const liveRes = await fetch(`/api/current-pm10?station_id=AP001&refresh=${force}`);
+      const ts = Date.now();
+      const liveRes = await fetch(`/api/current-pm10?station_id=AP001&refresh=${force}&_t=${ts}`, { cache: 'no-store' });
       const liveJson = await liveRes.json();
       if (liveJson.status === 'success') setLiveData(liveJson.data);
 
-      const predRes = await fetch('/api/prediction?station_id=AP001');
+      const predRes = await fetch(`/api/prediction?station_id=AP001&_t=${ts}`, { cache: 'no-store' });
       const predJson = await predRes.json();
       if (predJson.status === 'success') setPredData(predJson.data);
 
-      const histRes = await fetch('/api/historical-pm10?limit=24');
+      const histRes = await fetch(`/api/historical-pm10?limit=24&_t=${ts}`, { cache: 'no-store' });
       const histJson = await histRes.json();
       if (histJson.status === 'success') setHistData(histJson.data);
     } catch (err) {

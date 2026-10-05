@@ -740,3 +740,19 @@ body {
     border-color: var(--accent-blue);
     color: var(--accent-blue);
 }
+
+/* Map & Chart Layout Utility Helpers */
+#map-container {
+    height: 340px;
+    border-radius: 12px;
+    width: 100%;
+}
+
+.chart-wrapper {
+    height: 340px;
+}
+
+.badge-lg-padded {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.8rem;
+}
